@@ -2,7 +2,7 @@
 
 Static portfolio site. No build step: plain HTML pages plus a local `support.js` runtime.
 
-**Live:** https://alexnav28.github.io/Porfolio/
+**Live:** https://alexnav28.github.io/Portfolio/
 
 ## Structure
 
