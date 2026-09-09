@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+  html { margin: 0; padding: 0; scroll-behavior: smooth; }
+  body { margin: 0; padding: 0; background: #C9C7AF; color: #1F2A2E; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  img { max-width: 100%; display: block; }
+  a { color: #2C6E49; text-decoration: none; }
+  a:hover { color: #1F2A2E; }
+  a:focus-visible { outline: 2px solid #1F2A2E; outline-offset: 3px; }
+  ::selection { background: #1F2A2E; color: #EEF1DB; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+</helmet>
+
+<div style="background:#C9C7AF; color:#1F2A2E; font-family:'Alegreya Sans',system-ui,sans-serif; font-weight:400; font-size:17px; line-height:1.7">
+
+  <a href="#c01" style="position:absolute; left:-9999px; top:0; z-index:99; background:#1F2A2E; color:#EEF1DB; padding:12px 20px" style-focus="left:0">Skip to the case study</a>
+
+  <nav style="position:sticky; top:0; z-index:30; padding:20px 0 14px; background:linear-gradient(#C9C7AF 72%, rgba(201,199,175,0))">
+    <div style="position:relative; max-width:1140px; margin-inline:auto; padding-inline:26px; display:flex; flex-wrap:wrap; align-items:center; gap:16px">
+      <a href="Portfolio Landing v3.dc.html" style="font-family:'Source Serif 4',Georgia,serif; font-size:17px; color:#1F2A2E; white-space:nowrap">Alexis Navarrete</a>
+
+      <div data-navpill="" style="position:absolute; left:50%; transform:translateX(-50%); display:flex; gap:2px; padding:5px; background:#EEF1DB; border-radius:999px">
+        <a href="Portfolio Landing v3.dc.html" style="padding:10px 20px; border-radius:999px; color:#485B63; font-size:12.5px; letter-spacing:0.1em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="color:#1F2A2E">Home</a>
+        <a href="Portfolio Landing v3.dc.html#work" style="padding:10px 20px; border-radius:999px; background:#1F2A2E; color:#EEF1DB; font-size:12.5px; letter-spacing:0.1em; text-transform:uppercase">Work</a>
+        <a href="Portfolio Landing v3.dc.html#about" style="padding:10px 20px; border-radius:999px; color:#485B63; font-size:12.5px; letter-spacing:0.1em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="color:#1F2A2E">About</a>
+        <a href="Portfolio Landing v3.dc.html#contact" style="padding:10px 20px; border-radius:999px; color:#485B63; font-size:12.5px; letter-spacing:0.1em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="color:#1F2A2E">Contact</a>
+      </div>
+
+      <div style="margin-left:auto; display:flex; align-items:center; gap:12px">
+        <div style="display:flex; gap:8px">
+          <a href="https://www.linkedin.com/in/alexis-navarrete-62a9292b7" aria-label="LinkedIn" style="width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#EEF1DB; color:#1F2A2E; transition:background .18s, color .18s, transform .18s" style-hover="background:#1F2A2E; color:#EEF1DB; transform:translateY(-2px)"><svg viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3v-12zM9.5 8.98h3.8v1.64h.06c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76v6.55h-4v-5.81c0-1.39-.03-3.17-2-3.17-2 0-2.31 1.51-2.31 3.07v5.91h-4v-12z"></path></svg></a>
+          <a href="https://github.com/AlexNav28" aria-label="GitHub" style="width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#EEF1DB; color:#1F2A2E; transition:background .18s, color .18s, transform .18s" style-hover="background:#1F2A2E; color:#EEF1DB; transform:translateY(-2px)"><svg viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 016 0C17.4 4.7 18.4 5 18.4 5c.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"></path></svg></a>
+          <a data-mailto="" href="mailto:Alexis.navarrete.usa@gmail.com" aria-label="Email" style="width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#EEF1DB; color:#1F2A2E; transition:background .18s, color .18s, transform .18s" style-hover="background:#1F2A2E; color:#EEF1DB; transform:translateY(-2px)"><svg viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor"><path d="M2 5h20v14H2V5zm2 2v.5l8 5 8-5V7H4zm16 10v-7.1l-8 5-8-5V17h16z"></path></svg></a>
+        </div>
+        <a href="/resume.pdf" style="padding:13px 24px; border-radius:999px; background:#1F2A2E; color:#EEF1DB; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; white-space:nowrap; transition:background .18s" style-hover="background:#485B63; color:#EEF1DB">Résumé ↓</a>
+      </div>
+    </div>
+  </nav>
+
+  <main style="max-width:1140px; margin-inline:auto; padding-inline:26px">
+
+    <header style="background:#1F2A2E; color:#EEF1DB; border-radius:30px; padding:clamp(32px,4.4vw,58px); margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,3.4vw,48px); align-items:center">
+      <div style="min-width:0">
+      <a href="Portfolio Landing v3.dc.html#work" style="color:#EEF1DB; opacity:0.72; font-size:14.5px; letter-spacing:0.06em" style-hover="opacity:1; color:#EEF1DB">← All work</a>
+      <h1 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; color:#EEF1DB; font-size:clamp(2.1rem,4.6vw,3.5rem); letter-spacing:-0.02em; max-width:17ch; margin:20px 0 0">Intelligent Fingerprint Wallet</h1>
+      <p style="color:#C3CEC6; font-size:1.25rem; max-width:56ch; margin:20px 0 0">A wallet that only opens for its owner — and shouts when it's stolen.</p>
+      
+      <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:28px">
+        <a href="https://youtu.be/36Arx2CO36I" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; background:#EEF1DB; color:#1F2A2E; transition:background .15s" style-hover="background:#C9C7AF; color:#1F2A2E">Watch the demo →</a>
+        <a href="https://github.com/akrew10/ECE196_Fingerprint_Wallet" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; border:1px solid rgba(238,241,219,.5); color:#EEF1DB; transition:background .15s, color .15s, border-color .15s" style-hover="background:#EEF1DB; color:#1F2A2E; border-color:#EEF1DB">Repository</a>
+      </div>
+      </div>
+      <div style="min-width:0; display:flex; justify-content:center">
+        <img src="assets/w-hero-hand.webp" alt="The wallet open, with the card stack ejected after a fingerprint match" style="width:100%; max-width:420px; aspect-ratio:1/1; object-fit:cover; border-radius:20px; display:block">
+      </div>
+    </header>
+
+
+    <div style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px">
+      <dl style="display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:2px; background:#C9C7AF; border-radius:18px; overflow:hidden; margin:0">
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:12.5px; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Microcontroller</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">ESP32-S3</dd></div>
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:12.5px; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Fingerprint sensor</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">FPC2534 · 508 dpi</dd></div>
+        
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:12.5px; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">False accept rate</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">1 / 100,000</dd></div>
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:12.5px; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Identify time</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">140 – 1400 ms</dd></div>
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:12.5px; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Enrolled prints</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">Up to 30</dd></div>
+        
+        
+      </dl>
+    </div>
+
+    <section id="c01" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:15px; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">01</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">The problem</h2>
+      </div>
+      <p style="margin:0 0 18px; font-size:1.25rem; color:#1F2A2E; max-width:70ch; margin-inline:auto; text-align:center">Pickpocketing in crowded transit hubs, concerts and tourist districts doesn't just cost people cash — it costs them their identity documents, their cards, and days of their life spent cancelling and replacing things.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The products that exist address the wrong half of the problem. RFID-blocking wallets stop contactless skimming but do nothing once the wallet is physically gone. Bluetooth trackers help you <em>find</em> a wallet after it's taken, but they don't prevent the theft, they may not alert you during the grab itself, and a thief can simply remove the tag.</p>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Nothing on the market stops an unauthorised person from opening the wallet in the first place.</p>
+    </section>
+
+    <section id="c02" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:15px; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">02</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Approach</h2>
+      </div>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">We built the wallet around a single testable claim:</p>
+      <blockquote style="margin:0 0 20px; padding:18px 22px; background:#E3E1C9; border-radius:16px; border-left:3px solid #1F2A2E; text-align:center">
+        <p style="margin:0; color:#1F2A2E">If a wallet combines biometric authentication, BLE proximity monitoring and mobile alerting, it can prevent unauthorised access <em>and</em> notify the owner the moment separation occurs.</p>
+      </blockquote>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">That gave us three independent defences instead of one.</p>
+      <table style="width:100%; border-collapse:collapse; margin:8px 0 22px; font-size:14.5px">
+        <tr>
+          <th style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; font-family:'Source Serif 4',Georgia,serif; font-weight:600; color:#1F2A2E">Layer</th>
+          <th style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; font-family:'Source Serif 4',Georgia,serif; font-weight:600; color:#1F2A2E">Defends against</th>
+          <th style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; font-family:'Source Serif 4',Georgia,serif; font-weight:600; color:#1F2A2E">Mechanism</th>
+        </tr>
+        <tr>
+          <td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Biometric lock</td>
+          <td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Unauthorised opening</td>
+          <td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">FPC2534 match gates a servo latch</td>
+        </tr>
+        <tr>
+          <td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Motion + BLE</td>
+          <td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">The grab itself</td>
+          <td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">IMU detects irregular motion; BLE disconnect signals separation</td>
+        </tr>
+        <tr>
+          <td style="text-align:left; padding:11px 14px; color:#485B63">RFID mesh</td>
+          <td style="text-align:left; padding:11px 14px; color:#485B63">Contactless skimming</td>
+          <td style="text-align:left; padding:11px 14px; color:#485B63">Passive shielding over the card stack</td>
+        </tr>
+      </table>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">We deliberately did <strong style="color:#1F2A2E; font-weight:700">not</strong> design a new wallet body from scratch. We took the card-ejection mechanism and form factor of an existing card-holder as our mechanical baseline and spent our engineering time on the electronics and the locking mechanism instead. Ten weeks is not enough to solve both problems well, and the mechanical one was already solved.</p>
+    </section>
+
+    <section id="c03" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:15px; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">03</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Architecture</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(20px,2.6vw,34px); align-items:center; margin-bottom:22px">
+      <div style="min-width:0">
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The enclosure is a seven-layer stack, and that stack <em>is</em> the architecture.</p>
+      <table style="width:100%; border-collapse:collapse; margin:8px 0 0; font-size:14.5px">
+        <tr>
+          <th style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; font-family:'Source Serif 4',Georgia,serif; font-weight:600; color:#1F2A2E">Layer</th>
+          <th style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; font-family:'Source Serif 4',Georgia,serif; font-weight:600; color:#1F2A2E">Contents</th>
+        </tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">1 — Face</b></td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Machined cutout for the fingerprint sensor; pinhole for the ambient light sensor</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">2 — Gesture strip</b></td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Capacitive touch module for swipe and tap</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">3 — PCB</b></td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">ESP32-S3, sensor interface, power, audio, IMU, LED indicators</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">4 — Battery</b></td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Rechargeable lithium cell</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">5 — RFID mesh</b></td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Passive shielding against contactless readers</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">6 — Card stack</b></td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">The cards, behind everything above</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; color:#485B63"><b style="color:#1F2A2E">7 — Chassis</b></td><td style="text-align:left; padding:11px 14px; color:#485B63">Bottom shell</td></tr>
+      </table>
+      </div>
+      <figure style="margin:0; min-width:0"><img src="assets/w-exploded.webp" alt="Exploded skeleton view of the wallet layers" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">The seven-layer stack, exploded.</figcaption></figure>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px">
+        <figure style="margin:0 0 22px"><img src="assets/w-block-diagram.webp" alt="Technology block diagram of the wallet" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">System block diagram.</figcaption></figure>
+        <figure style="margin:0 0 22px"><img src="assets/w-state-machine.webp" alt="State machine diagram for the wallet firmware" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">Firmware state machine.</figcaption></figure>
+      </div>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The PCB's job is narrow and worth stating plainly: <strong style="color:#1F2A2E; font-weight:700">authenticate, then actuate.</strong> On a fingerprint match it drives the servo that releases the latch. The IMU runs alongside as an independent watchdog — irregular motion combined with a dropped BLE connection means the wallet has left your pocket without you, and it alarms.</p>
+    </section>
+
+    <section id="c04" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:15px; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">04</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">What I built</h2>
+      </div>
+      <p style="margin:0 0 18px; font-size:1.25rem; color:#1F2A2E; max-width:70ch; margin-inline:auto; text-align:center">I owned two of this project's three subsystems: the biometric authentication firmware, and the PCB from schematic through layout.</p>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:10px 0 14px; text-align:center">Biometric firmware</h3>
+      
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">I brought the FPC2534 up from datasheet to working authentication. The sensor isn't a read-a-value part — it packs its own MCU and authentication logic on board, so integrating it meant driving a state machine rather than polling a register. I implemented enrolment, identification, and the match-to-actuate path that releases the servo latch, in C++ on the ESP32-S3 under PlatformIO.</p><p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">I understood the part well enough by the end to write <a href="https://alexnav28.github.io/Biometric-sensor-Tutorial---FPC2530/">a standalone bring-up guide for it</a> — capacitive sensing theory from first principles, three worked code examples, and nine failure modes that aren't in the datasheet. That document is the strongest evidence I can offer that I understood the sensor rather than pasting an example sketch.</p>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">PCB</h3>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">I designed the schematic and did the layout in KiCad: ESP32-S3, the ZIF-connected fingerprint sensor, IMU, power management, servo drive and indicator LEDs. I also made the board work after fabrication revealed three errors in my own design — covered honestly in the next section, because that recovery is a more useful thing to know about me than a clean first spin would have been.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px">
+        <figure style="margin:0 0 22px"><img src="assets/w-schematic.webp" alt="KiCad schematic" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">Schematic.</figcaption></figure>
+        <figure style="margin:0 0 22px"><img src="assets/w-layout.webp" alt="KiCad board layout" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">Layout.</figcaption></figure>
+      </div>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">What I did not own</h3>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Aiden and Erictuan led the CAD and enclosure work and the BLE and mobile alerting path. I integrated against those interfaces but didn't design them.</p>
+    </section>
+
+    <section id="c05" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:15px; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">05</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Hard parts</h2>
+      </div>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:10px 0 14px; text-align:center">Frame desynchronisation on a 921600-baud binary stream</h3>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The sensor link ran at 921600 baud carrying a binary protocol. The ESP32-S3's bootloader emits ASCII on the same line at reset, and those bytes landed inside the binary stream. A parser that assumed frames began where the previous one ended lost alignment on the first reset and never recovered — every subsequent frame was garbage, and the failure looked like a dead sensor rather than a framing problem.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The fix was to stop trusting stream position and start searching for structure: a byte-level sliding window scanning for the <code style="font-family:ui-monospace,Menlo,Consolas,monospace; font-size:0.9em; background:#E3E1C9; padding:2px 6px; border-radius:5px">0x04</code> protocol marker, re-establishing frame alignment from any starting offset. Once the parser could resynchronise on its own, injected bootloader noise became survivable rather than fatal.</p>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">Three errors in my own PCB, found at bring-up</h3>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The board came back from fabrication with three defects, all mine. I chose to fix all three in hardware rather than respin, because a new board would have cost roughly a week out of a ten-week schedule.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px">
+        <figure style="margin:0 0 22px"><img src="assets/w-defect-motor.webp" alt="The motor control area of the board" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center"><b style="color:#1F2A2E">Motor net unrouted.</b> I reassigned the buzzer's GPIO to drive the servo. The lock survived; the alarm didn't.</figcaption></figure>
+        <figure style="margin:0 0 22px"><img src="assets/w-defect-nmos.webp" alt="The replaced NMOS transistor on the board" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center"><b style="color:#1F2A2E">NMOS gate and source swapped.</b> Fixed by sourcing a replacement and bending its pins to match the pads.</figcaption></figure>
+        <figure style="margin:0 0 22px"><img src="assets/w-defect-zif.webp" alt="The ZIF connector with a bodge wire" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center"><b style="color:#1F2A2E">ZIF connector had no 3.3 V.</b> The sensor had no power at all. Fixed with a bodge wire from the rail.</figcaption></figure>
+      </div>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">What I take from this is less about the individual mistakes than about the process gap behind them: I had no independent design review and no disciplined DRC pass before sending the board out. All three were catchable on a screen for free, and instead I caught them on a bench under deadline.</p>
+    </section>
+
+    <section id="c06" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:15px; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">06</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Results</h2>
+      </div>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The wallet works end to end: an enrolled fingerprint opens the latch, an unenrolled one doesn't, and the IMU plus BLE separation path fires an alert.</p>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">How the authentication path behaves</h3>
+      <table style="width:100%; border-collapse:collapse; margin:8px 0 22px; font-size:14.5px">
+        <tr>
+          <th style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; font-family:'Source Serif 4',Georgia,serif; font-weight:600; color:#1F2A2E">Behaviour</th>
+          <th style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; font-family:'Source Serif 4',Georgia,serif; font-weight:600; color:#1F2A2E">Value</th>
+          <th style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; font-family:'Source Serif 4',Georgia,serif; font-weight:600; color:#1F2A2E">Where it comes from</th>
+        </tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Readings per identification attempt</td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">12</b></td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">FPC2534 default</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Consecutive failures before lockout</td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">5</b></td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">FPC2534 default</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Lockout duration</td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">15 s</b></td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">FPC2534 default</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; color:#485B63">Window to close before the servo re-latches</td><td style="text-align:left; padding:11px 14px; color:#485B63"><b style="color:#1F2A2E">30 s</b></td><td style="text-align:left; padding:11px 14px; color:#485B63"><b style="color:#1F2A2E">My implementation</b></td></tr>
+      </table>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The first three are the sensor's own matching behaviour, not decisions I made. The FPC2534 runs its authentication logic on-module, so multi-sample matching and the failure lockout are enforced by the part itself. They're configurable and I tried adjusting them, but the change in observed behaviour was small enough that I left the defaults alone.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">I'm stating that plainly because the distinction matters. Knowing which behaviour belongs to your code and which belongs to the part you integrated is a basic requirement of working with a smart peripheral, and claiming the sensor's built-in lockout as a security decision of mine would be easy to catch and not worth the credit.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center"><strong style="color:#1F2A2E; font-weight:700">The 30-second re-latch is mine.</strong> On a successful match I drive the servo open and start a timer; when it expires the servo closes regardless of what the user is doing. The wallet fails secure. Staying open requires an explicit, recent, successful authentication.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; margin-bottom:22px">
+        <figure style="margin:0"><img src="assets/w-closed-2.png" alt="The wallet closed, showing the sensor in the top shell" loading="lazy" style="border-radius:20px; width:100%; aspect-ratio:4/5; object-fit:contain; background:#E3E1C9"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">Closed. The sensor sits flush in the machined cutout in the top shell.</figcaption></figure>
+        <figure style="margin:0"><img src="assets/w-internals.png" alt="Inside the wallet: PCB, servo and battery in the chassis" loading="lazy" style="border-radius:20px; width:100%; aspect-ratio:4/5; object-fit:contain; background:#E3E1C9"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">Inside the chassis — board, servo and the latch it drives.</figcaption></figure>
+      </div>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">One limitation worth stating: the buzzer was sacrificed to the GPIO reassignment, so the audible alarm didn't make the final build.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The project was featured on the UCSD engineering school's Instagram. ECE 196 doesn't rank projects, so that's recognition rather than a placement.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; font-size:0.86rem">
+        <a href="https://akrew10.github.io/ECE196_Fingerprint_Wallet/" style="display:flex; justify-content:space-between; align-items:center; gap:10px; padding:20px; border-radius:20px; background:#E3E1C9; color:#1F2A2E; transition:background .15s, color .15s" style-hover="background:#1F2A2E; color:#EEF1DB">Project website <span>↗</span></a>
+        <a href="https://www.instagram.com/p/DZN7bbdkt-F/?stkn=MTh5ZGlheDcwdnpiOA==" style="display:flex; justify-content:space-between; align-items:center; gap:10px; padding:20px; border-radius:20px; background:#E3E1C9; color:#1F2A2E; transition:background .15s, color .15s" style-hover="background:#1F2A2E; color:#EEF1DB">UCSD Engineering feature <span>↗</span></a>
+      </div>
+    </section>
+
+    <section id="c07" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:15px; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">07</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">What I'd do next</h2>
+      </div>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:10px 0 14px; text-align:center">Give the wallet a way to talk back</h3>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Right now it tells the user almost nothing. There's no visual confirmation of whether the latch is locked, and no feedback during enrolment — you place your finger repeatedly and hope. That gap got worse when the buzzer lost its GPIO to the servo, because the device ended up with no audio channel and no meaningful visual one, despite the board carrying indicator LEDs.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">I'd drive discrete LEDs on three states: <b style="color:#1F2A2E">locked / unlocked</b>, <b style="color:#1F2A2E">enrolment progress</b>, and <b style="color:#1F2A2E">lockout active</b>. That last one matters more than it sounds — a locked-out wallet and a broken wallet are currently indistinguishable to the user, which is the kind of thing that makes a working product feel unreliable.</p>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">Replace the fixed re-latch timeout with a sensor</h3>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Thirty seconds is a guess. It's too short if you're fumbling for the right card at a counter, and far too long if you took your card and walked away. The wallet already has an IMU and a capacitive touch strip, and either could drive a better rule: re-latch when the card stack is pushed back in, or when the wallet has been still for a few seconds, with the fixed timeout as a fallback rather than the only mechanism.</p>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">Respin the PCB</h3>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Three of our four hardware problems were routing and footprint errors that a proper design review and a DRC pass with a second set of eyes would have caught before fabrication. That's the actual lesson, and it's cheaper to learn on a class project than at work.</p>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">Measure the power budget properly</h3>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The FPC2534 idles at 14 µA and pulls 5.2 mA active, but we never characterised the full system's draw against real battery life. For a device meant to live in a pocket all day, that number is the difference between a product and a prototype.</p>
+    </section>
+
+    <div style="background:#EEF1DB; border-radius:30px; padding:34px 38px; display:flex; justify-content:space-between; align-items:center; gap:22px; flex-wrap:wrap; margin-bottom:22px">
+      <div>
+        <span style="font-size:13.5px; letter-spacing:0.1em; text-transform:uppercase; color:#485B63">Next project</span>
+        <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:6px 0 0">Thermal Presence Detection</h3>
+      </div>
+      <a href="Project-ThermalIoT.dc.html" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; background:#1F2A2E; color:#EEF1DB; transition:background .15s" style-hover="background:#485B63; color:#EEF1DB">Read it →</a>
+    </div>
+
+    <section style="background:#1F2A2E; border-radius:30px; padding:clamp(40px,5vw,64px); text-align:center; margin-bottom:36px">
+      <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; color:#EEF1DB; font-size:2.2rem; max-width:20ch; margin-inline:auto">Looking for a firmware engineer?</h2>
+      <p style="color:#BFC9BE; max-width:50ch; margin:18px auto 0">I'm open to full-time embedded and firmware roles.</p>
+      <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-top:30px">
+        <a data-mailto="" data-maillabel="" href="mailto:Alexis.navarrete.usa@gmail.com" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; background:#EEF1DB; color:#1F2A2E; transition:background .15s" style-hover="background:#C9C7AF; color:#1F2A2E">Alexis.navarrete.usa@gmail.com</a>
+        <a href="/resume.pdf" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; border:1px solid #7E8C85; color:#EEF1DB; transition:background .15s, color .15s" style-hover="background:#EEF1DB; color:#1F2A2E">Résumé — PDF</a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding-bottom:34px; color:#485B63; font-size:14.5px">
+    <div style="max-width:1140px; margin-inline:auto; padding-inline:26px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap">
+      <span>Built and deployed by me. No trackers, no cookies.</span><span>© 2026</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = this.el || document;
+
+    const email = this.props.email;
+    if (email) {
+      root.querySelectorAll('[data-mailto]').forEach(a => { a.setAttribute('href', 'mailto:' + email); });
+      const label = root.querySelector('[data-maillabel]');
+      if (label) label.textContent = email;
+    }
+
+    // centred nav pill drops to its own row before it can touch the wordmark or icons
+    const pill = root.querySelector('[data-navpill]');
+    const bar = pill && pill.parentElement;
+    const fit = () => {
+      if (!pill || !bar) return;
+      const kids = Array.from(bar.children).filter(el => el !== pill);
+      const sideMax = kids.reduce((w, el) => Math.max(w, el.getBoundingClientRect().width), 0);
+      const tight = pill.scrollWidth / 2 + sideMax + 32 > bar.clientWidth / 2;
+      if (tight) {
+        pill.style.position = 'static';
+        pill.style.left = 'auto';
+        pill.style.transform = 'none';
+        pill.style.order = '3';
+        pill.style.width = '100%';
+        pill.style.justifyContent = 'center';
+        pill.style.flexWrap = 'wrap';
+      } else {
+        pill.style.position = 'absolute';
+        pill.style.left = '50%';
+        pill.style.transform = 'translateX(-50%)';
+        pill.style.order = '';
+        pill.style.width = '';
+        pill.style.justifyContent = '';
+        pill.style.flexWrap = '';
+      }
+    };
+    this._fit = fit;
+    fit();
+    window.addEventListener('resize', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  }
+
+  componentWillUnmount() {
+    if (this._fit) window.removeEventListener('resize', this._fit);
+  }
+}
+
+</script>
+</body>
+</html>

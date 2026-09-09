@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+  html { margin: 0; padding: 0; scroll-behavior: smooth; }
+  body { margin: 0; padding: 0; background: #C9C7AF; color: #1F2A2E; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  img { max-width: 100%; display: block; }
+  a { color: #2C6E49; text-decoration: none; }
+  a:hover { color: #1F2A2E; }
+  a:focus-visible { outline: 2px solid #1F2A2E; outline-offset: 3px; }
+  ::selection { background: #1F2A2E; color: #EEF1DB; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+</helmet>
+
+<div style="background:#C9C7AF; color:#1F2A2E; font-family:'Alegreya Sans',system-ui,sans-serif; font-weight:400; font-size:1.075rem; line-height:1.7">
+
+  <a href="#c01" style="position:absolute; left:-9999px; top:0; z-index:99; background:#1F2A2E; color:#EEF1DB; padding:12px 20px" style-focus="left:0">Skip to the case study</a>
+
+  <nav style="position:sticky; top:0; z-index:30; padding:20px 0 14px; background:linear-gradient(#C9C7AF 72%, rgba(201,199,175,0))">
+    <div style="position:relative; max-width:1140px; margin-inline:auto; padding-inline:26px; display:flex; flex-wrap:wrap; align-items:center; gap:16px">
+      <a href="Portfolio Landing v3.dc.html" style="font-family:'Source Serif 4',Georgia,serif; font-size:1.06rem; color:#1F2A2E; white-space:nowrap">Alexis Navarrete</a>
+
+      <div data-navpill="" style="position:absolute; left:50%; transform:translateX(-50%); display:flex; gap:2px; padding:5px; background:#EEF1DB; border-radius:999px">
+        <a href="Portfolio Landing v3.dc.html" style="padding:10px 20px; border-radius:999px; color:#485B63; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="color:#1F2A2E">Home</a>
+        <a href="Portfolio Landing v3.dc.html#work" style="padding:10px 20px; border-radius:999px; background:#1F2A2E; color:#EEF1DB; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase">Work</a>
+        <a href="Portfolio Landing v3.dc.html#about" style="padding:10px 20px; border-radius:999px; color:#485B63; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="color:#1F2A2E">About</a>
+        <a href="Portfolio Landing v3.dc.html#contact" style="padding:10px 20px; border-radius:999px; color:#485B63; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="color:#1F2A2E">Contact</a>
+      </div>
+
+      <div style="margin-left:auto; display:flex; align-items:center; gap:12px">
+        <div style="display:flex; gap:8px">
+          <a href="https://www.linkedin.com/in/alexis-navarrete-62a9292b7" aria-label="LinkedIn" style="width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#EEF1DB; color:#1F2A2E; transition:background .18s, color .18s, transform .18s" style-hover="background:#1F2A2E; color:#EEF1DB; transform:translateY(-2px)"><svg viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3v-12zM9.5 8.98h3.8v1.64h.06c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76v6.55h-4v-5.81c0-1.39-.03-3.17-2-3.17-2 0-2.31 1.51-2.31 3.07v5.91h-4v-12z"></path></svg></a>
+          <a href="https://github.com/AlexNav28" aria-label="GitHub" style="width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#EEF1DB; color:#1F2A2E; transition:background .18s, color .18s, transform .18s" style-hover="background:#1F2A2E; color:#EEF1DB; transform:translateY(-2px)"><svg viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 016 0C17.4 4.7 18.4 5 18.4 5c.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"></path></svg></a>
+          <a data-mailto="" href="mailto:Alexis.navarrete.usa@gmail.com" aria-label="Email" style="width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#EEF1DB; color:#1F2A2E; transition:background .18s, color .18s, transform .18s" style-hover="background:#1F2A2E; color:#EEF1DB; transform:translateY(-2px)"><svg viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor"><path d="M2 5h20v14H2V5zm2 2v.5l8 5 8-5V7H4zm16 10v-7.1l-8 5-8-5V17h16z"></path></svg></a>
+        </div>
+        <a href="/resume.pdf" style="padding:13px 24px; border-radius:999px; background:#1F2A2E; color:#EEF1DB; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; white-space:nowrap; transition:background .18s" style-hover="background:#485B63; color:#EEF1DB">Résumé ↓</a>
+      </div>
+    </div>
+  </nav>
+
+  <main style="max-width:1140px; margin-inline:auto; padding-inline:26px">
+
+    <header style="background:#375065; color:#EEF1DB; border-radius:30px; padding:clamp(32px,4.4vw,58px); margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,3.4vw,48px); align-items:center">
+      <div style="min-width:0">
+        <a href="Portfolio Landing v3.dc.html#work" style="color:#EEF1DB; opacity:0.72; font-size:0.86rem; letter-spacing:0.06em" style-hover="opacity:1; color:#EEF1DB">← All work</a>
+        <h1 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; color:#EEF1DB; font-size:clamp(2.1rem,4.6vw,3.5rem); letter-spacing:-0.02em; max-width:17ch; margin:20px 0 0">WatchTower</h1>
+        <p style="color:#C6D3DC; font-size:1.25rem; max-width:56ch; margin:20px 0 0">Eleven developers, one repository, ten weeks. The project where I learned how teams actually ship.</p>
+        
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:28px">
+          <a href="https://youtu.be/tCBGQJBaOEo" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; background:#EEF1DB; color:#375065; transition:background .15s" style-hover="background:#C9C7AF; color:#375065">Watch the demo →</a>
+          <a href="https://github.com/cse110-sp26-group09/Watchtower-Course-Project" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; border:1px solid rgba(238,241,219,.5); color:#EEF1DB; transition:background .15s, color .15s, border-color .15s" style-hover="background:#EEF1DB; color:#375065; border-color:#EEF1DB">Repository</a>
+        </div>
+      </div>
+      <div style="min-width:0; display:flex; justify-content:center">
+        <img src="assets/wt-demo.gif" alt="Screen recording of the WatchTower realtime operations dashboard" style="width:100%; max-width:460px; border-radius:20px; display:block">
+      </div>
+    </header>
+
+    <div style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px">
+      <blockquote style="margin:0; padding:18px 22px; background:#E3E1C9; border-radius:16px; border-left:3px solid #375065; text-align:center">
+        <p style="margin:0; color:#1F2A2E"><strong style="color:#1F2A2E; font-weight:700">Why this project is on an embedded portfolio.</strong> It isn't here for the domain — WatchTower is a web observability platform and nothing about it is firmware. It's here because it's the only project on this site built by eleven people, and everything I know about working at team scale came from it: Git under real contention, code review, CI gates, and agreeing on an architecture with ten other opinions in the room. Those are the parts of the job that don't change when the target changes.</p>
+      </blockquote>
+    </div>
+
+    <div style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px">
+      <dl style="display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:2px; background:#C9C7AF; border-radius:18px; overflow:hidden; margin:0">
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:0.78rem; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Team size</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">11 developers</dd></div>
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:0.78rem; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Repository</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">513 commits · 9 branches</dd></div>
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:0.78rem; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">My contribution</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">20 commits · ~10.5k lines</dd></div>
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:0.78rem; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">CI</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">Structure · HTML · CSS · Jest · Playwright</dd></div><div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:0.78rem; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Outcome</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">First place</dd></div>
+        
+        
+      </dl>
+    </div>
+
+    <section id="c01" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">01</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">The problem</h2>
+      </div>
+      <p style="margin:0 0 18px; font-size:1.25rem; color:#1F2A2E; max-width:70ch; margin-inline:auto; text-align:center">Web teams can't see what's happening in production — which errors real users hit, which routes are slow, what breaks after a deploy.</p>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The commercial answers are heavy agents and vendor lock-in. WatchTower is a lightweight alternative: a dependency-free browser SDK you drop into any page, streaming errors, interactions and performance metrics to a Node backend that persists to Postgres and renders a live per-user dashboard.</p>
+    </section>
+
+    <section id="c02" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">02</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Approach</h2>
+      </div>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The team's decision that mattered most was <strong style="color:#1F2A2E; font-weight:700">prototyping before committing.</strong> Rather than argue about features in the abstract, we built throwaway versions and looked at them. I built those prototypes — three of them across the project — and each one existed to answer a question the team was stuck on.</p>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Prototype 1 established the shape: an SDK, a demo app to instrument, a server to receive events, and a dashboard to display them. Once that existed, the feature argument became concrete. People stopped describing what they wanted and started pointing at what was missing.</p>
+    </section>
+
+    <section id="c03" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">03</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Architecture</h2>
+      </div>
+      <pre style="background:#1F2A2E; color:#CBD9CD; border-radius:16px; padding:18px 20px; overflow-x:auto; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:0.86rem; line-height:1.7; margin:0 0 20px">External monitored app ── embeds SDK ──▶ Node backend ──▶ Supabase / Postgres
+                                              │
+                                              ▼
+                                    Dashboard (Clerk-authenticated,
+                                    data scoped per user)</pre>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">A separate test application, deployed to GitHub Pages, existed purely to generate telemetry against the real backend — errors, clicks, route changes — so the dashboard had something live to display and the SDK had a genuine integration target rather than a mock.</p>
+    </section>
+
+    <section id="c04" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">04</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">What I did, honestly</h2>
+      </div>
+      <p style="margin:0 0 18px; font-size:1.25rem; color:#1F2A2E; max-width:70ch; margin-inline:auto; text-align:center">I was one of eleven, and I want to be precise about scope: 20 commits of 513. I was not a lead and I did not own the backend or the database.</p>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:10px 0 14px; text-align:center">Three prototypes</h3>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Prototype 1 in early May, prototype 2 mid-month, prototype 3 in June. This was my main role and the thing the team leaned on me for — build the rough version so a decision becomes possible.</p>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">The original SDK</h3>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Prototype 1's <code style="font-family:ui-monospace,Menlo,Consolas,monospace; font-size:0.9em; background:#E3E1C9; padding:2px 6px; border-radius:5px">watchtower.js</code> was a dependency-free browser agent: it generates a session ID, hooks unhandled errors and performance timings, queues events with metadata, and flushes on a 2-second interval rather than sending per-event.</p>
+      <pre style="background:#1F2A2E; color:#CBD9CD; border-radius:16px; padding:18px 20px; overflow-x:auto; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:0.86rem; line-height:1.7; margin:0 0 20px"><code style="font-family:ui-monospace,Menlo,Consolas,monospace">WatchTower.prototype._enqueue = function (type, data) {
+  this._queue.push({
+    type, timestamp: new Date().toISOString(),
+    sessionId: this.sessionId, deployVersion: this.deployVersion,
+    route: location.pathname, data,
+  });
+};</code></pre>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">That queue-and-batch pattern is the one honest technical bridge to the rest of my work — it's the same shape as buffering sensor readings and publishing on an interval instead of per-sample, for the same reason: the transport cost dominates and batching amortises it.</p>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">The developer view</h3>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The dashboard surface aimed at developers rather than general users, plus analytics work — including latency-by-route, which is the metric a developer actually opens the tool to see.</p>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">Review, not just authorship</h3>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">I merged three PRs from other people's branches. Reading someone else's work carefully enough to approve it turned out to be a different skill from writing my own, and a harder one to fake.</p>
+    </section>
+
+    <section id="c05" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">05</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Hard parts</h2>
+      </div>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:10px 0 14px; text-align:center">CI found a real security flaw in my code, and I fixed it</h3>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">I wrote the SDK's session ID generator the obvious way:</p>
+      <pre style="background:#1F2A2E; color:#CBD9CD; border-radius:16px; padding:18px 20px; overflow-x:auto; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:0.86rem; line-height:1.7; margin:0 0 20px"><code style="font-family:ui-monospace,Menlo,Consolas,monospace">return 'sess_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 10);</code></pre>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">CodeQL, running automatically on the pull request, flagged it: <strong style="color:#1F2A2E; font-weight:700">insecure randomness.</strong> <code style="font-family:ui-monospace,Menlo,Consolas,monospace; font-size:0.9em; background:#E3E1C9; padding:2px 6px; border-radius:5px">Math.random()</code> is not cryptographically secure and is seedable and predictable in some engines. A session identifier built from a timestamp plus predictable randomness is a session an attacker can guess, which for a telemetry platform means guessing your way into someone else's data.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The fix:</p>
+      <pre style="background:#1F2A2E; color:#CBD9CD; border-radius:16px; padding:18px 20px; overflow-x:auto; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:0.86rem; line-height:1.7; margin:0 0 20px"><code style="font-family:ui-monospace,Menlo,Consolas,monospace">const bytes = new Uint8Array(8);
+window.crypto.getRandomValues(bytes);
+const randomSuffix = Array.from(bytes, b =&gt; b.toString(16).padStart(2, '0')).join('');
+return 'sess_' + Date.now().toString(36) + '_' + randomSuffix;</code></pre>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">I'm keeping this one because the loop is complete and it's all in the record: I wrote the flaw, an automated gate caught it before merge, and I fixed it in the same PR. Before this project I thought of CI as the thing that tells you tests failed. It's also the thing that catches the class of mistake you don't know enough to look for yet.</p>
+      <blockquote style="margin:0 0 20px; padding:18px 22px; background:#E3E1C9; border-radius:16px; border-left:3px solid #375065; text-align:center">
+        <p style="margin:0; color:#1F2A2E">"Use a CSPRNG for anything identifying" is a rule that transfers directly to firmware, where predictable session tokens, nonces and keys are the same vulnerability with worse consequences.</p>
+      </blockquote>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">Eleven people, one repository</h3>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">513 commits and 9 branches across 22 contributor identities in ten weeks. The mechanics I'd never had to learn on a three-person team:</p>
+      <table style="width:100%; border-collapse:collapse; margin:8px 0 22px; font-size:0.9rem">
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">Branch discipline.</b> Feature branches per work item, because eleven people committing to <code style="font-family:ui-monospace,Menlo,Consolas,monospace; font-size:0.9em; background:#E3E1C9; padding:2px 6px; border-radius:5px">main</code> is not a workflow.</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">Merge conflicts as routine.</b> Not a crisis, just a cost of the day — and one that shrinks when people scope their branches narrowly.</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">Review as a queue.</b> Work sits until someone reads it, which changes how you write it. Small, legible PRs get merged; large ones rot.</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; color:#485B63"><b style="color:#1F2A2E">CI as a gate, not a report.</b> Repository structure checks, HTML validation, CSS validation, Jest unit tests and Playwright end-to-end tests. Red CI meant nothing moved.</td></tr>
+      </table>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">Agreeing on an architecture with ten other opinions</h3>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The genuinely hard part wasn't technical. Deciding how the SDK should hand events to the backend meant reconciling people who wanted different things, some of whom were more experienced than me. Prototypes helped more than arguments did. It's much easier to disagree productively about something you can both run.</p>
+    </section>
+
+    <section id="c06" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">06</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Results</h2>
+      </div>
+      <p style="margin:0 0 18px; font-size:1.25rem; color:#1F2A2E; max-width:70ch; margin-inline:auto; text-align:center">The team took first place.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The platform shipped working: SDK, backend on Render, Postgres persistence via Supabase, Clerk-authenticated dashboard, error grouping, latency-by-route, deploy-version tracking, and a separate hosted test app generating live telemetry.</p>
+      <figure style="margin:0 0 22px"><img src="assets/wt-dashboard.webp" alt="The WatchTower developer dashboard showing issues, latency and traffic" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:0.9rem; color:#485B63; text-align:center">The developer view — the surface I worked on. The MANAGER / DEVELOPER toggle splits the audience: managers get health and trends, developers get the things you act on. Latest issues carry the route and the deploy version that introduced them, latency is broken out per route against a watch threshold, and patch notes tie each release to its open issue count. A developer opening this at 3 a.m. wants the failing route and the version, not an availability percentage.</figcaption></figure>
+      <figure style="margin:0"><img src="assets/wt-analytics.webp" alt="The analytics view showing user count, activity, issues and latency by route" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:0.9rem; color:#485B63; text-align:center">Analytics, including latency-by-route — the piece I implemented. Response latency is plotted against an editable threshold, so the chart answers "is this bad" rather than just "what is it."</figcaption></figure>
+    </section>
+
+    <section id="c07" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">07</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">What I took from it</h2>
+      </div>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center"><strong style="color:#1F2A2E; font-weight:700">Prototyping is a decision-making tool, not a coding stage.</strong> The three prototypes weren't practice runs. Each one existed to end a debate, and they worked because a running artifact settles arguments that words don't.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center"><strong style="color:#1F2A2E; font-weight:700">Small PRs get merged; big ones rot.</strong> The most useful habit I picked up, and the one I'd carry into any team regardless of what it's building.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center"><strong style="color:#1F2A2E; font-weight:700">Automated review catches what you don't know to look for.</strong> The CodeQL finding is the concrete example. I couldn't have caught that by being careful, because I didn't know the rule.</p>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center"><strong style="color:#1F2A2E; font-weight:700">I'd want to own something closer to the metal next time.</strong> I was useful here and the team was better for the prototypes, but front-end work isn't where I'm strongest or where I'm heading. The value I took from this was almost entirely about process, and that's an honest thing to say about a project rather than a reason to dress it up as something else.</p>
+    </section>
+
+    <div style="background:#EEF1DB; border-radius:30px; padding:34px 38px; display:flex; justify-content:space-between; align-items:center; gap:22px; flex-wrap:wrap; margin-bottom:22px">
+      <div>
+        <span style="font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; color:#485B63">Back to the start</span>
+        <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:6px 0 0">Intelligent Fingerprint Wallet</h3>
+      </div>
+      <a href="Project-FingerprintWallet.dc.html" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; background:#1F2A2E; color:#EEF1DB; transition:background .15s" style-hover="background:#485B63; color:#EEF1DB">Read it →</a>
+    </div>
+
+    <section style="background:#1F2A2E; border-radius:30px; padding:clamp(40px,5vw,64px); text-align:center; margin-bottom:36px">
+      <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; color:#EEF1DB; font-size:2.2rem; max-width:20ch; margin-inline:auto">Looking for a firmware engineer?</h2>
+      <p style="color:#BFC9BE; max-width:50ch; margin:18px auto 0">I'm open to full-time embedded and firmware roles.</p>
+      <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-top:30px">
+        <a data-mailto="" data-maillabel="" href="mailto:Alexis.navarrete.usa@gmail.com" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; background:#EEF1DB; color:#1F2A2E; transition:background .15s" style-hover="background:#C9C7AF; color:#1F2A2E">Alexis.navarrete.usa@gmail.com</a>
+        <a href="/resume.pdf" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; border:1px solid #7E8C85; color:#EEF1DB; transition:background .15s, color .15s" style-hover="background:#EEF1DB; color:#1F2A2E">Résumé — PDF</a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding-bottom:34px; color:#485B63; font-size:0.9rem">
+    <div style="max-width:1140px; margin-inline:auto; padding-inline:26px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap">
+      <span>Built and deployed by me. No trackers, no cookies.</span><span>© 2026</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = this.el || document;
+
+    const email = this.props.email;
+    if (email) {
+      root.querySelectorAll('[data-mailto]').forEach(a => { a.setAttribute('href', 'mailto:' + email); });
+      const label = root.querySelector('[data-maillabel]');
+      if (label) label.textContent = email;
+    }
+
+    const pill = root.querySelector('[data-navpill]');
+    const bar = pill && pill.parentElement;
+    const fit = () => {
+      if (!pill || !bar) return;
+      const kids = Array.from(bar.children).filter(el => el !== pill);
+      const sideMax = kids.reduce((w, el) => Math.max(w, el.getBoundingClientRect().width), 0);
+      const tight = pill.scrollWidth / 2 + sideMax + 32 > bar.clientWidth / 2;
+      if (tight) {
+        pill.style.position = 'static';
+        pill.style.left = 'auto';
+        pill.style.transform = 'none';
+        pill.style.order = '3';
+        pill.style.width = '100%';
+        pill.style.justifyContent = 'center';
+        pill.style.flexWrap = 'wrap';
+      } else {
+        pill.style.position = 'absolute';
+        pill.style.left = '50%';
+        pill.style.transform = 'translateX(-50%)';
+        pill.style.order = '';
+        pill.style.width = '';
+        pill.style.justifyContent = '';
+        pill.style.flexWrap = '';
+      }
+    };
+    this._fit = fit;
+    fit();
+    window.addEventListener('resize', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  }
+
+  componentWillUnmount() {
+    if (this._fit) window.removeEventListener('resize', this._fit);
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+  html { margin: 0; padding: 0; scroll-behavior: smooth; }
+  body { margin: 0; padding: 0; background: #C9C7AF; color: #1F2A2E; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  img { max-width: 100%; display: block; }
+  a { color: #2C6E49; text-decoration: none; }
+  a:hover { color: #1F2A2E; }
+  a:focus-visible { outline: 2px solid #1F2A2E; outline-offset: 3px; }
+  ::selection { background: #1F2A2E; color: #EEF1DB; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+</helmet>
+
+<div style="background:#C9C7AF; color:#1F2A2E; font-family:'Alegreya Sans',system-ui,sans-serif; font-weight:400; font-size:1.075rem; line-height:1.7">
+
+  <a href="#c01" style="position:absolute; left:-9999px; top:0; z-index:99; background:#1F2A2E; color:#EEF1DB; padding:12px 20px" style-focus="left:0">Skip to the case study</a>
+
+  <nav style="position:sticky; top:0; z-index:30; padding:20px 0 14px; background:linear-gradient(#C9C7AF 72%, rgba(201,199,175,0))">
+    <div style="position:relative; max-width:1140px; margin-inline:auto; padding-inline:26px; display:flex; flex-wrap:wrap; align-items:center; gap:16px">
+      <a href="Portfolio Landing v3.dc.html" style="font-family:'Source Serif 4',Georgia,serif; font-size:1.06rem; color:#1F2A2E; white-space:nowrap">Alexis Navarrete</a>
+
+      <div data-navpill="" style="position:absolute; left:50%; transform:translateX(-50%); display:flex; gap:2px; padding:5px; background:#EEF1DB; border-radius:999px">
+        <a href="Portfolio Landing v3.dc.html" style="padding:10px 20px; border-radius:999px; color:#485B63; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="color:#1F2A2E">Home</a>
+        <a href="Portfolio Landing v3.dc.html#work" style="padding:10px 20px; border-radius:999px; background:#1F2A2E; color:#EEF1DB; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase">Work</a>
+        <a href="Portfolio Landing v3.dc.html#about" style="padding:10px 20px; border-radius:999px; color:#485B63; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="color:#1F2A2E">About</a>
+        <a href="Portfolio Landing v3.dc.html#contact" style="padding:10px 20px; border-radius:999px; color:#485B63; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="color:#1F2A2E">Contact</a>
+      </div>
+
+      <div style="margin-left:auto; display:flex; align-items:center; gap:12px">
+        <div style="display:flex; gap:8px">
+          <a href="https://www.linkedin.com/in/alexis-navarrete-62a9292b7" aria-label="LinkedIn" style="width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#EEF1DB; color:#1F2A2E; transition:background .18s, color .18s, transform .18s" style-hover="background:#1F2A2E; color:#EEF1DB; transform:translateY(-2px)"><svg viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3v-12zM9.5 8.98h3.8v1.64h.06c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76v6.55h-4v-5.81c0-1.39-.03-3.17-2-3.17-2 0-2.31 1.51-2.31 3.07v5.91h-4v-12z"></path></svg></a>
+          <a href="https://github.com/AlexNav28" aria-label="GitHub" style="width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#EEF1DB; color:#1F2A2E; transition:background .18s, color .18s, transform .18s" style-hover="background:#1F2A2E; color:#EEF1DB; transform:translateY(-2px)"><svg viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 016 0C17.4 4.7 18.4 5 18.4 5c.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"></path></svg></a>
+          <a data-mailto="" href="mailto:Alexis.navarrete.usa@gmail.com" aria-label="Email" style="width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#EEF1DB; color:#1F2A2E; transition:background .18s, color .18s, transform .18s" style-hover="background:#1F2A2E; color:#EEF1DB; transform:translateY(-2px)"><svg viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor"><path d="M2 5h20v14H2V5zm2 2v.5l8 5 8-5V7H4zm16 10v-7.1l-8 5-8-5V17h16z"></path></svg></a>
+        </div>
+        <a href="/resume.pdf" style="padding:13px 24px; border-radius:999px; background:#1F2A2E; color:#EEF1DB; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; white-space:nowrap; transition:background .18s" style-hover="background:#485B63; color:#EEF1DB">Résumé ↓</a>
+      </div>
+    </div>
+  </nav>
+
+  <main style="max-width:1140px; margin-inline:auto; padding-inline:26px">
+
+    <header style="background:#2E5A46; color:#EEF1DB; border-radius:30px; padding:clamp(32px,4.4vw,58px); margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,3.4vw,48px); align-items:center">
+      <div style="min-width:0">
+        <a href="Portfolio Landing v3.dc.html#work" style="color:#EEF1DB; opacity:0.72; font-size:0.86rem; letter-spacing:0.06em" style-hover="opacity:1; color:#EEF1DB">← All work</a>
+        <h1 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; color:#EEF1DB; font-size:clamp(2.1rem,4.6vw,3.5rem); letter-spacing:-0.02em; max-width:17ch; margin:20px 0 0">STM32 from the registers up</h1>
+        <p style="color:#C3D8CB; font-size:1.25rem; max-width:56ch; margin:20px 0 0">Peripheral drivers written against the reference manual instead of a configurator — one module at a time, each proven on hardware.</p>
+        <ul style="display:flex; flex-wrap:wrap; gap:10px; margin:28px 0 0; padding:0; list-style:none">
+          <li style="border:1px solid rgba(238,241,219,.34); border-radius:999px; padding:7px 16px; font-size:0.86rem">2026 · ongoing</li>
+          <li style="border:1px solid rgba(238,241,219,.34); border-radius:999px; padding:7px 16px; font-size:0.86rem">Personal project, self-directed</li>
+          <li style="border:1px solid rgba(238,241,219,.34); border-radius:999px; padding:7px 16px; font-size:0.86rem">My scope: everything</li>
+        </ul>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:28px">
+          <a href="https://github.com/AlexNav28/STM32F446RE_Development" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; background:#EEF1DB; color:#2E5A46; transition:background .15s" style-hover="background:#C9C7AF; color:#2E5A46">Repository →</a>
+          <a href="/resume.pdf" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; border:1px solid rgba(238,241,219,.5); color:#EEF1DB; transition:background .15s, color .15s, border-color .15s" style-hover="background:#EEF1DB; color:#2E5A46; border-color:#EEF1DB">Résumé — PDF</a>
+        </div>
+      </div>
+      <div style="min-width:0; display:flex; justify-content:center">
+        <img src="assets/stm32-nucleo.png" alt="STM32 Nucleo-F446RE development board" style="width:100%; max-width:460px; border-radius:20px; background:#EEF1DB; display:block">
+      </div>
+    </header>
+
+    <div style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px">
+      
+      <dl style="display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:2px; background:#C9C7AF; border-radius:18px; overflow:hidden; margin:0">
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:0.78rem; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Target</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">STM32F446RE</dd></div>
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:0.78rem; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Core</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">Cortex-M4F · 180 MHz</dd></div>
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:0.78rem; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Board</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">Nucleo-64 · ST-LINK</dd></div>
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:0.78rem; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Approach</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">Bare metal, no HAL</dd></div>
+        <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:0.78rem; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Language</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">C · arm - gcc</dd></div>
+        
+      </dl>
+    </div>
+
+    <section id="c01" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">01</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Why this project</h2>
+      </div>
+      <p style="margin:0 0 18px; font-size:1.25rem; color:#1F2A2E; max-width:70ch; margin-inline:auto; text-align:center">Generated code hid the part I wanted to learn.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Coursework and tutorials both start you in a configurator: click a pin, get a driver, blink an LED. It works, and it teaches you almost nothing about the peripheral. When something misbehaves — a clock tree left at default, a timer prescaler off by one — you have no mental model to debug with.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">So I started this repo with one rule: <strong style="color:#1F2A2E; font-weight:700">every peripheral gets written from the reference manual first</strong>. Read the register map, write the minimal driver, prove it on the board with a scope or logic analyzer, then compare against what the HAL would have generated and note where mine is worse.</p>
+      <blockquote style="margin:0 0 20px; padding:18px 22px; background:#E3E1C9; border-radius:16px; border-left:3px solid #2E5A46; text-align:center">
+        <p style="margin:0; color:#1F2A2E">The goal isn't to avoid the HAL forever. It's to be the person on the team who can explain what it's doing.</p>
+      </blockquote>
+      <table style="width:100%; border-collapse:collapse; margin:8px 0 0; font-size:0.9rem">
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">Rule.</b> Reference manual before any library.</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">Rule.</b> Every driver proven on hardware, not in a debugger only.</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; color:#485B63"><b style="color:#1F2A2E">Rule.</b> Commit the notes, not just the code.</td></tr>
+      </table>
+    </section>
+
+    <section id="c02" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">02</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Scope &amp; setup</h2>
+      </div>
+      <p style="margin:0 0 18px; font-size:1.25rem; color:#1F2A2E; max-width:70ch; margin-inline:auto; text-align:center">Solo build, real toolchain.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Everything here is mine end-to-end: linker script, startup code, build system, drivers, and the bring-up notes in the repo. I kept the toolchain deliberately plain so nothing important hides behind an IDE.</p>
+      <table style="width:100%; border-collapse:collapse; margin:8px 0 0; font-size:0.9rem">
+        <tr>
+          <th style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; font-family:'Source Serif 4',Georgia,serif; font-weight:600; color:#1F2A2E">Hardware</th>
+          <th style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; font-family:'Source Serif 4',Georgia,serif; font-weight:600; color:#1F2A2E">Toolchain</th>
+        </tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Nucleo-F446RE</td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">arm-none-eabi-gcc + Make</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Logic analyzer (8-ch)</td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">OpenOCD / ST-LINK flashing</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Bench DMM + USB scope</td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">GDB over SWD</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; color:#485B63">Breadboard peripherals: LEDs, buttons, I²C sensor</td><td style="text-align:left; padding:11px 14px; color:#485B63">Git, one branch per peripheral</td></tr>
+      </table>
+    </section>
+
+    <section id="c03" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">03</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Process</h2>
+      </div>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Each module follows the same loop: read the register map, write the smallest driver that can be wrong in an obvious way, verify it on the board, then write down what surprised me. The order below is deliberate — nothing depends on a peripheral I haven't understood yet.</p>
+      <table style="width:100%; border-collapse:collapse; margin:8px 0 0; font-size:0.9rem">
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">01 — Startup &amp; linker script.</b> Vector table, reset handler, .data/.bss init, stack placement — the parts every project inherits and nobody reads. First time I saw exactly where <code style="font-family:ui-monospace,Menlo,Consolas,monospace; font-size:0.9em; background:#E3E1C9; padding:2px 6px; border-radius:5px">main</code> comes from.</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">02 — RCC &amp; GPIO.</b> Clock enable per bus, mode/pull/speed registers, then a blink I can explain register by register. Verified pin timing on the logic analyzer rather than trusting the delay loop.</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">03 — Clock tree to 180 MHz.</b> PLL configuration, flash latency, bus prescalers — and confirming the result on MCO with a scope instead of assuming the math was right.</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">04 — Timers &amp; UART.</b> A real microsecond delay from a general-purpose timer, then printf-over-UART so the board can talk back. Baud divisor derived from the clock config, not copied from a tutorial.</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; color:#485B63"><b style="color:#1F2A2E">05 — Interrupts, then DMA.</b> NVIC priorities, EXTI on a debounced button, and moving UART traffic off the CPU with DMA — measured with a GPIO toggle around the ISR.</td></tr>
+      </table>
+      
+    </section>
+
+    <section id="c04" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">04</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Decisions &amp; tradeoffs</h2>
+      </div>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:10px 0 14px; text-align:center">Registers by hand instead of STM32CubeMX</h3>
+      <p style="margin:0 0 12px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Drivers are written against the reference manual with CMSIS headers for the register definitions only.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center"><b style="color:#1F2A2E">Cost:</b> much slower, and my drivers are less portable than the HAL's. <b style="color:#1F2A2E">Why anyway:</b> I can now read a HAL function and tell what it configures — which is the point.</p>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">Makefile + GCC instead of an IDE project</h3>
+      <p style="margin:0 0 12px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Plain Make, explicit compiler and linker flags, OpenOCD for flashing — so the build is inspectable and works the same on any machine.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center"><b style="color:#1F2A2E">Cost:</b> no one-click debug UI; I set up GDB myself. <b style="color:#1F2A2E">Why anyway:</b> nothing about the build is a mystery, and it maps directly to CI later.</p>
+
+      <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">Verify on hardware, not in the debugger</h3>
+      <p style="margin:0 0 12px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">Every module ships with a measurement: a logic-analyzer capture, a scope shot on MCO, or a GPIO toggle around the critical section.</p>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center"><b style="color:#1F2A2E">Cost:</b> slower per commit; needs the bench. <b style="color:#1F2A2E">Why anyway:</b> it caught a wrong flash latency that ran "fine" in the debugger.</p>
+    </section>
+
+    <section id="c05" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">05</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Where it stands</h2>
+      </div>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The repository is live and I push as each module is proven on hardware.</p>
+      <table style="width:100%; border-collapse:collapse; margin:8px 0 0; font-size:0.9rem">
+        <tr>
+          <th style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; font-family:'Source Serif 4',Georgia,serif; font-weight:600; color:#1F2A2E">Module</th>
+          <th style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; font-family:'Source Serif 4',Georgia,serif; font-weight:600; color:#1F2A2E">Status</th>
+        </tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Startup + linker</td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">Done</b></td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">RCC + GPIO</td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63"><b style="color:#1F2A2E">Done</b></td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Clock tree 180 MHz</td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">In progress</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Timers + UART</td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">In progress</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">EXTI + NVIC</td><td style="text-align:left; padding:11px 14px; border-bottom:1px solid #C9C7AF; color:#485B63">Planned</td></tr>
+        <tr><td style="text-align:left; padding:11px 14px; color:#485B63">DMA + I²C sensor</td><td style="text-align:left; padding:11px 14px; color:#485B63">Planned</td></tr>
+      </table>
+    </section>
+
+    <section id="c06" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">06</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">What I'd do differently</h2>
+      </div>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center"><strong style="color:#1F2A2E; font-weight:700">1. Write the README as I go.</strong> The code landed before the notes. Documenting each peripheral while it's fresh — register quirks included — would make the repo far more useful to anyone reading it, including future me.</p>
+      <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center"><strong style="color:#1F2A2E; font-weight:700">2. Set up a test target earlier.</strong> A host-side build with the register block mocked would let me unit-test driver logic without the board, and would have caught two off-by-one prescaler bugs before flashing.</p>
+      <p style="margin:0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center"><strong style="color:#1F2A2E; font-weight:700">3. Pick one end goal for the drivers.</strong> Learning peripheral-by-peripheral is fine, but a target application — a small data logger, say — would force the modules to work together and surface the integration problems that matter in real firmware.</p>
+    </section>
+
+    <section id="c07" style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px; scroll-margin-top:96px">
+      <div style="display:flex; align-items:baseline; justify-content:center; gap:16px; margin-bottom:20px">
+        <span style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">07</span>
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Code &amp; artifacts</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; font-size:0.86rem">
+        <a href="https://github.com/AlexNav28/STM32F446RE_Development" style="display:flex; justify-content:space-between; align-items:center; gap:10px; padding:20px; border-radius:20px; background:#E3E1C9; color:#1F2A2E; transition:background .15s, color .15s" style-hover="background:#1F2A2E; color:#EEF1DB">STM32F446RE_Development <span>↗</span></a>
+        <a href="https://github.com/AlexNav28/STM32F446RE_Development" style="display:flex; justify-content:space-between; align-items:center; gap:10px; padding:20px; border-radius:20px; background:#E3E1C9; color:#1F2A2E; transition:background .15s, color .15s" style-hover="background:#1F2A2E; color:#EEF1DB">Bring-up notes <span>↗</span></a>
+      </div>
+      <p style="margin:20px 0 0; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">This one is self-directed and still growing — happy to walk the code and the captures live.</p>
+    </section>
+
+    <div style="background:#EEF1DB; border-radius:30px; padding:34px 38px; display:flex; justify-content:space-between; align-items:center; gap:22px; flex-wrap:wrap; margin-bottom:22px">
+      <div>
+        <span style="font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; color:#485B63">Next project</span>
+        <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:6px 0 0">WatchTower</h3>
+      </div>
+      <a href="Project-WatchTower.dc.html" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; background:#1F2A2E; color:#EEF1DB; transition:background .15s" style-hover="background:#485B63; color:#EEF1DB">Read it →</a>
+    </div>
+
+    <section style="background:#1F2A2E; border-radius:30px; padding:clamp(40px,5vw,64px); text-align:center; margin-bottom:36px">
+      <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; color:#EEF1DB; font-size:2.2rem; max-width:20ch; margin-inline:auto">Looking for a firmware engineer?</h2>
+      <p style="color:#BFC9BE; max-width:50ch; margin:18px auto 0">I'm open to full-time embedded and firmware roles.</p>
+      <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-top:30px">
+        <a data-mailto="" data-maillabel="" href="mailto:Alexis.navarrete.usa@gmail.com" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; background:#EEF1DB; color:#1F2A2E; transition:background .15s" style-hover="background:#C9C7AF; color:#1F2A2E">Alexis.navarrete.usa@gmail.com</a>
+        <a href="/resume.pdf" style="display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:14px 28px; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; border:1px solid #7E8C85; color:#EEF1DB; transition:background .15s, color .15s" style-hover="background:#EEF1DB; color:#1F2A2E">Résumé — PDF</a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding-bottom:34px; color:#485B63; font-size:0.9rem">
+    <div style="max-width:1140px; margin-inline:auto; padding-inline:26px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap">
+      <span>Built and deployed by me. No trackers, no cookies.</span><span>© 2026</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = this.el || document;
+
+    const email = this.props.email;
+    if (email) {
+      root.querySelectorAll('[data-mailto]').forEach(a => { a.setAttribute('href', 'mailto:' + email); });
+      const label = root.querySelector('[data-maillabel]');
+      if (label) label.textContent = email;
+    }
+
+    const pill = root.querySelector('[data-navpill]');
+    const bar = pill && pill.parentElement;
+    const fit = () => {
+      if (!pill || !bar) return;
+      const kids = Array.from(bar.children).filter(el => el !== pill);
+      const sideMax = kids.reduce((w, el) => Math.max(w, el.getBoundingClientRect().width), 0);
+      const tight = pill.scrollWidth / 2 + sideMax + 32 > bar.clientWidth / 2;
+      if (tight) {
+        pill.style.position = 'static';
+        pill.style.left = 'auto';
+        pill.style.transform = 'none';
+        pill.style.order = '3';
+        pill.style.width = '100%';
+        pill.style.justifyContent = 'center';
+        pill.style.flexWrap = 'wrap';
+      } else {
+        pill.style.position = 'absolute';
+        pill.style.left = '50%';
+        pill.style.transform = 'translateX(-50%)';
+        pill.style.order = '';
+        pill.style.width = '';
+        pill.style.justifyContent = '';
+        pill.style.flexWrap = '';
+      }
+    };
+    this._fit = fit;
+    fit();
+    window.addEventListener('resize', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  }
+
+  componentWillUnmount() {
+    if (this._fit) window.removeEventListener('resize', this._fit);
+  }
+}
+
+</script>
+</body>
+</html>

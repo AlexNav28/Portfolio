@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<style>
+  html { margin: 0; padding: 0; scroll-behavior: smooth; }
+  body { margin: 0; padding: 0; background: #C9C7AF; color: #1F2A2E; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  img { max-width: 100%; display: block; }
+  a { color: #2C6E49; text-decoration: none; }
+  a:hover { color: #1F2A2E; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #1F2A2E; outline-offset: 3px; }
+  ::selection { background: #1F2A2E; color: #EEF1DB; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+</style>
+</helmet>
+
+<div style="background:#C9C7AF; color:#1F2A2E; font-family:'Alegreya Sans',system-ui,sans-serif; font-weight:400; font-size:17px; line-height:1.68">
+
+  <a href="#work" style="position:absolute; left:-9999px; top:0; z-index:99; background:#1F2A2E; color:#EEF1DB; padding:12px 20px; border-radius:0 0 12px 0" style-focus="left:0">Skip to work</a>
+
+  <nav style="position:sticky; top:0; z-index:30; padding:20px 0 14px; background:linear-gradient(#C9C7AF 72%, rgba(201,199,175,0))">
+    <div style="position:relative; max-width:1180px; margin-inline:auto; padding-inline:26px; display:flex; flex-wrap:wrap; align-items:center; gap:16px">
+      <a href="#top" style="font-family:'Source Serif 4',Georgia,serif; font-size:17px; color:#1F2A2E; white-space:nowrap">Alexis Navarrete</a>
+
+      <div data-navpill="" style="position:absolute; left:50%; transform:translateX(-50%); display:flex; gap:2px; padding:5px; background:#EEF1DB; border-radius:999px">
+        <a data-spy="top" href="#top" style="padding:10px 20px; border-radius:999px; background:#1F2A2E; color:#EEF1DB; font-size:12.5px; letter-spacing:0.1em; text-transform:uppercase; transition:background .18s, color .18s">Home</a>
+        <a data-spy="work" href="#work" style="padding:10px 20px; border-radius:999px; background:transparent; color:#485B63; font-size:12.5px; letter-spacing:0.1em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="color:#1F2A2E">Work</a>
+        <a data-spy="about" href="#about" style="padding:10px 20px; border-radius:999px; background:transparent; color:#485B63; font-size:12.5px; letter-spacing:0.1em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="color:#1F2A2E">About</a>
+        <a data-spy="contact" href="#contact" style="padding:10px 20px; border-radius:999px; background:transparent; color:#485B63; font-size:12.5px; letter-spacing:0.1em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="color:#1F2A2E">Contact</a>
+      </div>
+
+      <div style="margin-left:auto; display:flex; align-items:center; gap:12px">
+        <div style="display:flex; gap:8px">
+          <a href="https://www.linkedin.com/in/alexis-navarrete-62a9292b7" aria-label="LinkedIn" style="width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#EEF1DB; color:#1F2A2E; transition:background .18s, color .18s, transform .18s" style-hover="background:#1F2A2E; color:#EEF1DB; transform:translateY(-2px)"><svg viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3v-12zM9.5 8.98h3.8v1.64h.06c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76v6.55h-4v-5.81c0-1.39-.03-3.17-2-3.17-2 0-2.31 1.51-2.31 3.07v5.91h-4v-12z"></path></svg></a>
+          <a href="https://github.com/AlexNav28" aria-label="GitHub" style="width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#EEF1DB; color:#1F2A2E; transition:background .18s, color .18s, transform .18s" style-hover="background:#1F2A2E; color:#EEF1DB; transform:translateY(-2px)"><svg viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 016 0C17.4 4.7 18.4 5 18.4 5c.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"></path></svg></a>
+          <a data-mailto="" href="mailto:Alexis.navarrete.usa@gmail.com" aria-label="Email" style="width:42px; height:42px; border-radius:50%; display:grid; place-items:center; background:#EEF1DB; color:#1F2A2E; transition:background .18s, color .18s, transform .18s" style-hover="background:#1F2A2E; color:#EEF1DB; transform:translateY(-2px)"><svg viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor"><path d="M2 5h20v14H2V5zm2 2v.5l8 5 8-5V7H4zm16 10v-7.1l-8 5-8-5V17h16z"></path></svg></a>
+        </div>
+        <a href="/resume.pdf" style="padding:13px 24px; border-radius:999px; background:#1F2A2E; color:#EEF1DB; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; white-space:nowrap; transition:background .18s" style-hover="background:#485B63; color:#EEF1DB">Résumé ↓</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top" style="max-width:1180px; margin-inline:auto; padding:clamp(28px,4.5vw,56px) 26px clamp(40px,6vw,72px)">
+    <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:0; width:100%">
+
+      <div style="position:relative; z-index:3; flex:1 1 460px; min-width:300px; margin-right:max(-200px, min(0px, calc(300px - 38vw)))">
+        <h1 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:clamp(2.7rem,6.4vw,5.5rem); line-height:1.06; letter-spacing:-0.025em; max-width:13ch; margin:0">Firmware that keeps working when nobody is watching it.</h1>
+        <p style="max-width:46ch; margin:28px 0 0; font-size:clamp(1.1rem,1.35vw,1.35rem); line-height:1.6; color:#485B63">I'm Alexis&nbsp; a <b style="font-weight: 400; color: rgb(31, 42, 46);">computer engineering graduate from UC San Diego</b>, looking for an entry-level embedded or firmware role. Four projects below, <em style="font-style: normal; color: rgb(44, 110, 73);">each written up with the full engineering story</em>, including the parts that went wrong.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:34px">
+          <a href="#work" style="padding:13px 26px; border-radius:999px; background:#1F2A2E; color:#EEF1DB; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; transition:background .18s" style-hover="background:#485B63; color:#EEF1DB">See the work →</a>
+          <a href="/resume.pdf" style="padding:13px 26px; border-radius:999px; border:1px solid #1F2A2E; color:#1F2A2E; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="background:#1F2A2E; color:#EEF1DB">Résumé — PDF</a>
+        </div>
+        <ul style="list-style:none; display:flex; flex-wrap:wrap; gap:10px; margin:26px 0 0; padding:0">
+          
+          
+        </ul>
+        
+      </div>
+
+      <div style="position:relative; z-index:1; flex:1 1 380px; min-width:280px; display:flex; justify-content:center; align-items:flex-end; min-height:min(clamp(340px,48vw,620px),56svh)">
+        <div aria-hidden="true" style="position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:clamp(260px,34vw,440px); height:min(clamp(300px,43vw,560px),50svh); background:#EEF1DB; border-radius:999px 999px 44px 44px"></div>
+        <img src="assets/hero-pi.png" alt="Raspberry Pi 5 single-board computer" style="position:relative; z-index:2; height:min(clamp(340px,48vw,620px),56svh); width:auto; object-fit:contain; filter:drop-shadow(0 16px 30px rgba(31,42,46,.3))">
+        
+        
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <section id="work" style="max-width:1180px; margin-inline:auto; padding:clamp(48px,7vw,84px) 26px; scroll-margin-top:88px">
+      <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:36px">
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:2.3rem; line-height:1.06; margin:0">Work</h2>
+        <span style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#485B63">Four projects</span>
+      </div>
+
+      <article style="background:#1F2A2E; border-radius:30px; padding:26px; margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:34px; align-items:center">
+        <div><img src="assets/work-wallet.jpg" alt="Intelligent fingerprint wallet" style="border-radius:20px; width:100%; aspect-ratio:1/1; object-fit:cover; object-position:center"></div>
+        <div style="padding:14px 26px 14px 12px; color:#EEF1DB">
+          <span style="display:inline-block; background:#EEF1DB; color:#1F2A2E; border-radius:999px; padding:5px 14px; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:16px">Lead project</span>
+          <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:1.7rem; line-height:1.06; color:#EEF1DB; margin:0 0 14px">Intelligent Fingerprint Wallet</h3>
+          <p style="margin:0 0 26px; color:#BFC9BE; max-width:44ch">A wallet that only opens for its owner. I owned the biometric firmware and designed the board it runs on — then made that board work after fabrication proved me wrong three times.</p>
+          <a href="Project-FingerprintWallet.dc.html" style="display:inline-block; padding:13px 26px; border-radius:999px; border:1px solid #EEF1DB; color:#EEF1DB; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="background:#EEF1DB; color:#1F2A2E">Read the case study →</a>
+        </div>
+      </article>
+
+      <article style="background:#EEF1DB; border-radius:30px; padding:22px; margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:34px; align-items:center">
+        <div style="padding:14px 12px 14px 26px">
+          <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:1.7rem; line-height:1.06; margin:0 0 14px">Thermal Presence Detection</h3>
+          <p style="margin:0 0 26px; color:#485B63; max-width:44ch">An 8×8 thermal sensor to a live browser dashboard, with inference running on the microcontroller. Months later I audited the model I'd shipped and found the benchmark was flattering it by eleven points.</p>
+          <a href="Project-ThermalIoT.dc.html" style="display:inline-block; padding:13px 26px; border-radius:999px; border:1px solid #1F2A2E; color:#1F2A2E; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="background:#1F2A2E; color:#EEF1DB">Read the case study →</a>
+        </div>
+        <div><img src="assets/work-thermal.jpg" alt="ESP32-S3 wired over I2C to the AMG8833 thermal sensor" style="border-radius:20px; width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center"></div>
+      </article>
+
+      <article style="background:#EEF1DB; border-radius:30px; padding:22px; margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:34px; align-items:center">
+        <div><img src="assets/work-watchtower.webp" alt="WatchTower observability dashboard" style="border-radius:20px; width:100%; aspect-ratio:4/3; object-fit:cover"></div>
+        <div style="padding:14px 26px 14px 12px">
+          <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:1.7rem; line-height:1.06; margin:0 0 14px">WatchTower</h3>
+          <p style="margin:0 0 26px; color:#485B63; max-width:44ch">Eleven developers, one repository, ten weeks. I prototyped and built the developer view, and learned what Git, code review and CI actually cost at team scale.</p>
+          <a href="Project-WatchTower.dc.html" style="display:inline-block; padding:13px 26px; border-radius:999px; border:1px solid #1F2A2E; color:#1F2A2E; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="background:#1F2A2E; color:#EEF1DB">Read the case study →</a>
+        </div>
+      </article>
+
+      <article style="background:#EEF1DB; border-radius:30px; padding:22px; margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:34px; align-items:center">
+        <div style="padding:14px 12px 14px 26px">
+          <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:1.7rem; line-height:1.06; margin:0 0 14px">STM32 from the registers up</h3>
+          <p style="margin:0 0 26px; color:#485B63; max-width:44ch">Peripheral drivers written against the reference manual instead of a configurator — startup code, clock tree, timers, UART, then interrupts and DMA. Ongoing, in public, one module at a time.</p>
+          <a href="Project-STM32F446RE.dc.html" style="display:inline-block; padding:13px 26px; border-radius:999px; border:1px solid #1F2A2E; color:#1F2A2E; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="background:#1F2A2E; color:#EEF1DB">Read the case study →</a>
+        </div>
+        <div><img src="assets/stm32-nucleo.png" alt="STM32 Nucleo-F446RE development board" style="border-radius:20px; width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center; background:#EEF1DB"></div>
+      </article>
+
+      <div style="background:#E3E1C9; border-radius:30px; padding:30px 34px; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:28px; align-items:center">
+        <div>
+          <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:1.25rem; line-height:1.06; margin:0 0 8px">FPC2534 fingerprint sensor — I²C bring-up guide</h3>
+          <p style="margin:0; color:#485B63; max-width:64ch">A written guide to a sensor with almost no public documentation, including nine failure modes that aren't in the datasheet. Written while bringing the part up for the wallet.</p>
+        </div>
+        <a href="https://alexnav28.github.io/Biometric-sensor-Tutorial---FPC2530/" style="justify-self:start; padding:13px 26px; border-radius:999px; border:1px solid #1F2A2E; color:#1F2A2E; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; white-space:nowrap; transition:background .18s, color .18s" style-hover="background:#1F2A2E; color:#EEF1DB">Read it →</a>
+      </div>
+    </section>
+
+    <section id="about" style="max-width:1180px; margin-inline:auto; padding:clamp(48px,7vw,84px) 26px; scroll-margin-top:88px">
+      <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:36px">
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:2.3rem; line-height:1.06; margin:0">About</h2>
+        <span style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#485B63">Who you'd be hiring</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:26px; align-items:stretch">
+        <div style="background:#EEF1DB; border-radius:30px; padding:20px">
+          <img src="assets/about-portrait.webp" alt="Alexis Navarrete at the bench" style="border-radius:20px; width:100%">
+        </div>
+        <div id="skills" style="background:#EEF1DB; border-radius:30px; padding:34px 38px; flex:2 1 0">
+          <p style="margin:0 0 18px; color:#485B63; max-width:58ch">I graduated from UC San Diego in 2026 with a degree in computer engineering. What I care about is the seam between hardware and software — where a datasheet claim meets a bench measurement and the two disagree.</p>
+          <p style="margin:0 0 18px; color:#485B63; max-width:58ch">Most of what I know came from getting things wrong in a way I could measure. I sent a PCB to fabrication with three defects in it and fixed all three by hand rather than lose a week of a ten-week schedule. I shipped a model that benchmarked at 89% and later proved it was really 78%. Those are the projects I'd rather talk about than the ones that went smoothly.</p>
+          <p style="margin:0; color:#485B63; max-width:58ch">I'm looking for a firmware or embedded role on a team that treats security and careful work as defaults rather than as features.</p>
+          <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:26px; padding-top:22px; border-top:1px solid #C9C7AF">
+            <div>
+              <h4 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:16px; margin:0 0 6px">Firmware</h4>
+              <ul style="margin:0; padding:0; list-style:none; color:#485B63; font-size:14px; line-height:1.7"><li>C, C++, Python</li><li>ESP32-S3, ARM Cortex-M</li><li>I²C, SPI, UART, BLE</li><li>RTOS, state machines</li></ul>
+            </div>
+            <div>
+              <h4 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:16px; margin:0 0 6px">Hardware</h4>
+              <ul style="margin:0; padding:0; list-style:none; color:#485B63; font-size:14px; line-height:1.7"><li>Schematic, PCB layout</li><li>KiCad, DRC, design review</li><li>Logic analyzer, scope</li><li>Soldering, rework</li></ul>
+            </div>
+            <div>
+              <h4 style="font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:16px; margin:0 0 6px">Practice</h4>
+              <ul style="margin:0; padding:0; list-style:none; color:#485B63; font-size:14px; line-height:1.7"><li>Git, code review</li><li>CI/CD, unit &amp; HW test</li><li>Agile, technical writing</li><li>Linux, GDB</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="max-width:1180px; margin-inline:auto; padding:0 26px clamp(48px,7vw,84px); scroll-margin-top:88px">
+      <div style="background:#1F2A2E; border-radius:30px; padding:clamp(44px,6vw,72px); text-align:center; margin-bottom:40px">
+        <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:2.3rem; line-height:1.06; color:#EEF1DB; max-width:20ch; margin-inline:auto">Looking for a firmware engineer?</h2>
+        <p style="color:#BFC9BE; max-width:50ch; margin:20px auto 0">I'm open to full-time embedded and firmware roles. The fastest way to see how I work is the wallet case study — or just email me.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:34px; justify-content:center">
+          <a data-mailto="" data-maillabel="" href="mailto:Alexis.navarrete.usa@gmail.com" style="padding:13px 26px; border-radius:999px; background:#EEF1DB; color:#1F2A2E; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; transition:background .18s" style-hover="background:#C9C7AF; color:#1F2A2E">Alexis.navarrete.usa@gmail.com</a>
+          <a href="/resume.pdf" style="padding:13px 26px; border-radius:999px; border:1px solid #7E8C85; color:#EEF1DB; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; transition:background .18s, color .18s, border-color .18s" style-hover="background:#EEF1DB; color:#1F2A2E; border-color:#EEF1DB">Résumé — PDF</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding-bottom:34px; color:#485B63; font-size:14px">
+    <div style="max-width:1180px; margin-inline:auto; padding-inline:26px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap">
+      <span>Built and deployed by me. No trackers, no cookies.</span><span>© 2026</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = this.el || document;
+
+    // email injection
+    const email = this.props.email;
+    if (email) {
+      root.querySelectorAll('[data-mailto]').forEach(a => { a.setAttribute('href', 'mailto:' + email); });
+      const label = root.querySelector('[data-maillabel]');
+      if (label) label.textContent = email;
+    }
+
+    // eased in-page scrolling — longer and softer than the browser default
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const glide = (targetY, ms) => {
+      const startY = window.pageYOffset;
+      const dist = targetY - startY;
+      if (!dist) return;
+      const t0 = performance.now();
+      const ease = t => 1 - Math.pow(1 - t, 3);
+      const step = now => {
+        const t = Math.min(1, (now - t0) / ms);
+        window.scrollTo(0, startY + dist * ease(t));
+        if (t < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    this._onNavClick = e => {
+      const a = e.target.closest('a[href^="#"]');
+      if (!a || reduce) return;
+      const id = a.getAttribute('href').slice(1);
+      const el = id ? document.getElementById(id) : document.body;
+      if (!el) return;
+      e.preventDefault();
+      const top = id ? el.getBoundingClientRect().top + window.pageYOffset - 88 : 0;
+      const ms = Math.min(480, Math.max(260, Math.abs(top - window.pageYOffset) * 0.18));
+      glide(top, ms);
+      history.replaceState(null, '', id ? '#' + id : location.pathname);
+    };
+    root.addEventListener('click', this._onNavClick);
+
+    // nav pill follows the section in view
+    const links = Array.from(root.querySelectorAll('[data-spy]'));
+    const setOn = key => links.forEach(a => {
+      const on = a.getAttribute('data-spy') === key;
+      a.style.background = on ? '#1F2A2E' : 'transparent';
+      a.style.color = on ? '#EEF1DB' : '#485B63';
+    });
+    if (!('IntersectionObserver' in window) || !links.length) return;
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) setOn(e.target.id); });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    links.forEach(a => {
+      const el = document.getElementById(a.getAttribute('data-spy'));
+      if (el) io.observe(el);
+    });
+    this._io = io;
+
+    // the centred pill overlaps the wordmark on narrow widths — reflow it inline instead
+    const pill = root.querySelector('[data-navpill]');
+    const bar = pill && pill.parentElement;
+    const fit = () => {
+      if (!pill || !bar) return;
+      pill.style.position = 'absolute';
+      pill.style.left = '50%';
+      pill.style.transform = 'translateX(-50%)';
+      const kids = Array.from(bar.children).filter(el => el !== pill);
+      const sideMax = kids.reduce((w, el) => Math.max(w, el.getBoundingClientRect().width), 0);
+      const tight = pill.scrollWidth / 2 + sideMax + 32 > bar.clientWidth / 2;
+      if (tight) {
+        pill.style.position = 'static';
+        pill.style.left = 'auto';
+        pill.style.transform = 'none';
+        pill.style.order = '3';
+        pill.style.width = '100%';
+        pill.style.justifyContent = 'center';
+        pill.style.flexWrap = 'wrap';
+      } else {
+        pill.style.order = '';
+        pill.style.width = '';
+        pill.style.justifyContent = '';
+        pill.style.flexWrap = '';
+      }
+    };
+    this._fit = fit;
+    fit();
+    window.addEventListener('resize', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  }
+
+  componentWillUnmount() {
+    if (this._onNavClick) (this.el || document).removeEventListener('click', this._onNavClick);
+    if (this._io) this._io.disconnect();
+    if (this._fit) window.removeEventListener('resize', this._fit);
+  }
+}
+
+</script>
+</body>
+</html>
