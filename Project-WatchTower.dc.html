@@ -22,6 +22,39 @@
   a:focus-visible { outline: 2px solid #1F2A2E; outline-offset: 3px; }
   ::selection { background: #1F2A2E; color: #EEF1DB; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+  /* Phones. Layout is inline-styled, so these overrides need !important. */
+  @media (max-width: 640px) {
+    /* nav: wordmark + icons on one row, links on one row below; the résumé button stays in the contact block */
+    nav { padding: 12px 0 8px !important; }
+    nav > div { padding-inline: 16px !important; gap: 10px !important; }
+    nav a[href="resume.pdf"] { display: none !important; }
+    nav a[aria-label] { width: 36px !important; height: 36px !important; }
+    [data-navpill] { position: static !important; transform: none !important; order: 3; width: 100% !important; flex-wrap: nowrap !important; }
+    [data-navpill] a { flex: 1 1 0; text-align: center; padding: 8px 4px !important; font-size: 11.5px !important; letter-spacing: 0.08em !important; }
+    footer > div { padding-inline: 16px !important; }
+
+    /* one gutter instead of two: 12px page edge + ~18px card padding */
+    main { padding-inline: 12px !important; }
+    main > header { padding: 28px 20px !important; gap: 24px !important; border-radius: 24px !important; }
+    main > section, main > div { padding: 26px 18px !important; border-radius: 24px !important; }
+    main > section:last-child { padding: 40px 20px !important; }
+    main h2 { font-size: 1.75rem !important; }
+    main h3 { font-size: 1.35rem !important; }
+    main > section:not(:last-child) p, main figcaption { text-align: left !important; }
+    main blockquote { padding: 14px 16px !important; }
+
+    /* tables: tighter cells; scroll sideways only if one still doesn't fit */
+    main table { display: block; overflow-x: auto; font-size: 13.5px !important; }
+    main th, main td { padding: 9px 8px !important; }
+    main pre { font-size: 0.75rem !important; padding: 14px !important; }
+
+    /* stat strip: two across instead of five stacked */
+    main dl { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    main dl > div { padding: 12px 14px !important; }
+    main dl > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+    main dd { font-size: 1rem !important; }
+  }
 </style>
 </helmet>
 
@@ -53,7 +86,7 @@
 
   <main style="max-width:1140px; margin-inline:auto; padding-inline:26px">
 
-    <header style="background:#375065; color:#EEF1DB; border-radius:30px; padding:clamp(32px,4.4vw,58px); margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,3.4vw,48px); align-items:center">
+    <header style="background:#375065; color:#EEF1DB; border-radius:30px; padding:clamp(32px,4.4vw,58px); margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr)); gap:clamp(28px,3.4vw,48px); align-items:center">
       <div style="min-width:0">
         <a href="index.html#work" style="color:#EEF1DB; opacity:0.72; font-size:0.86rem; letter-spacing:0.06em" style-hover="opacity:1; color:#EEF1DB">← All work</a>
         <h1 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; color:#EEF1DB; font-size:clamp(2.1rem,4.6vw,3.5rem); letter-spacing:-0.02em; max-width:17ch; margin:20px 0 0">WatchTower</h1>
@@ -76,7 +109,7 @@
     </div>
 
     <div style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px">
-      <dl style="display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:2px; background:#C9C7AF; border-radius:18px; overflow:hidden; margin:0">
+      <dl style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr)); gap:2px; background:#C9C7AF; border-radius:18px; overflow:hidden; margin:0">
         <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:0.78rem; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Team size</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">11 developers</dd></div>
         <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:0.78rem; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Repository</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">513 commits · 9 branches</dd></div>
         <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:0.78rem; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">My contribution</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">20 commits · ~10.5k lines</dd></div>
@@ -242,6 +275,15 @@ class Component extends DCLogic {
     const bar = pill && pill.parentElement;
     const fit = () => {
       if (!pill || !bar) return;
+      // back to the centred default before measuring — a width:100% left over from a
+      // narrow window would otherwise measure as "tight" forever and never un-stretch
+      pill.style.position = 'absolute';
+      pill.style.left = '50%';
+      pill.style.transform = 'translateX(-50%)';
+      pill.style.order = '';
+      pill.style.width = '';
+      pill.style.justifyContent = '';
+      pill.style.flexWrap = '';
       const kids = Array.from(bar.children).filter(el => el !== pill);
       const sideMax = kids.reduce((w, el) => Math.max(w, el.getBoundingClientRect().width), 0);
       const tight = pill.scrollWidth / 2 + sideMax + 32 > bar.clientWidth / 2;
@@ -253,14 +295,6 @@ class Component extends DCLogic {
         pill.style.width = '100%';
         pill.style.justifyContent = 'center';
         pill.style.flexWrap = 'wrap';
-      } else {
-        pill.style.position = 'absolute';
-        pill.style.left = '50%';
-        pill.style.transform = 'translateX(-50%)';
-        pill.style.order = '';
-        pill.style.width = '';
-        pill.style.justifyContent = '';
-        pill.style.flexWrap = '';
       }
     };
     this._fit = fit;

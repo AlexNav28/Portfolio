@@ -22,6 +22,47 @@
   a:focus-visible, button:focus-visible { outline: 2px solid #1F2A2E; outline-offset: 3px; }
   ::selection { background: #1F2A2E; color: #EEF1DB; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+
+  /* Phones. Layout is inline-styled, so these overrides need !important. */
+  @media (max-width: 640px) {
+    /* nav: wordmark + icons on one row, links on one row below; the résumé button stays in the hero and contact block */
+    nav { padding: 12px 0 8px !important; }
+    nav > div { padding-inline: 16px !important; gap: 10px !important; }
+    nav a[href="resume.pdf"] { display: none !important; }
+    nav a[aria-label] { width: 36px !important; height: 36px !important; }
+    [data-navpill] { position: static !important; transform: none !important; order: 3; width: 100% !important; flex-wrap: nowrap !important; }
+    [data-navpill] a { flex: 1 1 0; text-align: center; padding: 8px 4px !important; font-size: 11.5px !important; letter-spacing: 0.08em !important; }
+    footer > div { padding-inline: 16px !important; }
+
+    /* one 16px page gutter */
+    #top, main > section { padding-inline: 16px !important; }
+    #work, #about { padding-block: 40px !important; }
+
+    /* hero photo is tablet/desktop only; on phones the intro stands alone */
+    #top > div > div:last-child { display: none !important; }
+
+    /* project cards: picture first and nearly edge to edge, tighter text frame */
+    article { padding: 12px !important; gap: 16px !important; border-radius: 24px !important; }
+    article > div:has(img) { order: -1; }
+    article > div:not(:has(img)) { padding: 4px 8px 12px !important; }
+    #work > div:last-child { padding: 24px 20px !important; }
+
+    /* about */
+    #about > div > div:first-child { padding: 12px !important; }
+    #skills { padding: 24px 20px !important; }
+    #skills > div { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+
+    /* contact */
+    #contact > div { padding: 40px 20px !important; }
+    [data-maillabel] { max-width: 100%; overflow-wrap: anywhere; letter-spacing: 0.06em !important; }
+  }
+
+  /* Below ~860px the hero stacks, so centre the intro over the picture. */
+  @media (max-width: 860px) {
+    #top > div > div:first-child { margin-right: 0 !important; text-align: center; }
+    #top h1, #top p { margin-inline: auto !important; }
+    #top > div > div:first-child > div { justify-content: center; }
+  }
 </style>
 </helmet>
 
@@ -56,7 +97,7 @@
 
       <div style="position:relative; z-index:3; flex:1 1 460px; min-width:300px; margin-right:max(-200px, min(0px, calc(300px - 38vw)))">
         <h1 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:clamp(2.7rem,6.4vw,5.5rem); line-height:1.06; letter-spacing:-0.025em; max-width:13ch; margin:0">Firmware that keeps working when nobody is watching it.</h1>
-        <p style="max-width:46ch; margin:28px 0 0; font-size:clamp(1.1rem,1.35vw,1.35rem); line-height:1.6; color:#485B63">I'm Alexis&nbsp; a <b style="font-weight: 400; color: rgb(31, 42, 46);">computer engineering graduate from UC San Diego</b>, looking for an entry-level embedded or firmware role. Four projects below, <em style="font-style: normal; color: rgb(44, 110, 73);">each written up with the full engineering story</em>, including the parts that went wrong.</p>
+        <p style="max-width:46ch; margin:28px 0 0; font-size:clamp(1.1rem,1.35vw,1.35rem); line-height:1.6; color:#485B63">I'm Alexis&nbsp; a <b style="font-weight: 400; color: rgb(31, 42, 46);">computer engineering graduate from UC San Diego</b>, looking for an entry-level embedded or firmware role. Three projects below, <em style="font-style: normal; color: rgb(44, 110, 73);">each written up with the full engineering story</em>, including the parts that went wrong.</p>
         <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:34px">
           <a href="#work" style="padding:13px 26px; border-radius:999px; background:#1F2A2E; color:#EEF1DB; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; transition:background .18s" style-hover="background:#485B63; color:#EEF1DB">See the work →</a>
           <a href="resume.pdf" style="padding:13px 26px; border-radius:999px; border:1px solid #1F2A2E; color:#1F2A2E; font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; transition:background .18s, color .18s" style-hover="background:#1F2A2E; color:#EEF1DB">Résumé — PDF</a>
@@ -68,9 +109,8 @@
         
       </div>
 
-      <div style="position:relative; z-index:1; flex:1 1 380px; min-width:280px; display:flex; justify-content:center; align-items:flex-end; min-height:min(clamp(340px,48vw,620px),56svh)">
-        <div aria-hidden="true" style="position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:clamp(260px,34vw,440px); height:min(clamp(300px,43vw,560px),50svh); background:#EEF1DB; border-radius:999px 999px 44px 44px"></div>
-        <img src="assets/hero-pi.png" alt="Raspberry Pi 5 single-board computer" style="position:relative; z-index:2; height:min(clamp(340px,48vw,620px),56svh); width:auto; object-fit:contain; filter:drop-shadow(0 16px 30px rgba(31,42,46,.3))">
+      <div style="position:relative; z-index:1; flex:1 1 380px; min-width:280px; display:flex; justify-content:center; align-items:center; padding:14px 0">
+        <img src="assets/w-internals.png" alt="The fingerprint wallet opened up: my PCB, the servo that drives the latch, and the USB-C charging module" style="height:min(clamp(300px,48vw,620px),56svh); width:auto; filter:drop-shadow(0 18px 28px rgba(31,42,46,.35))">
         
         
       </div>
@@ -82,10 +122,10 @@
     <section id="work" style="max-width:1180px; margin-inline:auto; padding:clamp(48px,7vw,84px) 26px; scroll-margin-top:88px">
       <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:36px">
         <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:2.3rem; line-height:1.06; margin:0">Work</h2>
-        <span style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#485B63">Four projects</span>
+        <span style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#485B63">Three projects</span>
       </div>
 
-      <article style="background:#1F2A2E; border-radius:30px; padding:26px; margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:34px; align-items:center">
+      <article style="background:#1F2A2E; border-radius:30px; padding:26px; margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:34px; align-items:center">
         <div><img src="assets/work-wallet.jpg" alt="Intelligent fingerprint wallet" style="border-radius:20px; width:100%; aspect-ratio:1/1; object-fit:cover; object-position:center"></div>
         <div style="padding:14px 26px 14px 12px; color:#EEF1DB">
           <span style="display:inline-block; background:#EEF1DB; color:#1F2A2E; border-radius:999px; padding:5px 14px; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:16px">Lead project</span>
@@ -95,7 +135,7 @@
         </div>
       </article>
 
-      <article style="background:#EEF1DB; border-radius:30px; padding:22px; margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:34px; align-items:center">
+      <article style="background:#EEF1DB; border-radius:30px; padding:22px; margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:34px; align-items:center">
         <div style="padding:14px 12px 14px 26px">
           <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:1.7rem; line-height:1.06; margin:0 0 14px">Thermal Presence Detection</h3>
           <p style="margin:0 0 26px; color:#485B63; max-width:44ch">An 8×8 thermal sensor to a live browser dashboard, with inference running on the microcontroller. Months later I audited the model I'd shipped and found the benchmark was flattering it by eleven points.</p>
@@ -104,7 +144,7 @@
         <div><img src="assets/work-thermal.jpg" alt="ESP32-S3 wired over I2C to the AMG8833 thermal sensor" style="border-radius:20px; width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center"></div>
       </article>
 
-      <article style="background:#EEF1DB; border-radius:30px; padding:22px; margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:34px; align-items:center">
+      <article style="background:#EEF1DB; border-radius:30px; padding:22px; margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:34px; align-items:center">
         <div><img src="assets/work-watchtower.webp" alt="WatchTower observability dashboard" style="border-radius:20px; width:100%; aspect-ratio:4/3; object-fit:cover"></div>
         <div style="padding:14px 26px 14px 12px">
           <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:1.7rem; line-height:1.06; margin:0 0 14px">WatchTower</h3>
@@ -113,7 +153,8 @@
         </div>
       </article>
 
-      <article style="background:#EEF1DB; border-radius:30px; padding:22px; margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:34px; align-items:center">
+      <!-- TEMPORARILY HIDDEN: STM32F446RE project card. Page is being reworked; restore this block and bump the "Three projects" count back to four when it ships again.
+      <article style="background:#EEF1DB; border-radius:30px; padding:22px; margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:34px; align-items:center">
         <div style="padding:14px 12px 14px 26px">
           <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:1.7rem; line-height:1.06; margin:0 0 14px">STM32 from the registers up</h3>
           <p style="margin:0 0 26px; color:#485B63; max-width:44ch">Peripheral drivers written against the reference manual instead of a configurator — startup code, clock tree, timers, UART, then interrupts and DMA. Ongoing, in public, one module at a time.</p>
@@ -121,8 +162,9 @@
         </div>
         <div><img src="assets/stm32-nucleo.png" alt="STM32 Nucleo-F446RE development board" style="border-radius:20px; width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center; background:#EEF1DB"></div>
       </article>
+      -->
 
-      <div style="background:#E3E1C9; border-radius:30px; padding:30px 34px; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:28px; align-items:center">
+      <div style="background:#E3E1C9; border-radius:30px; padding:30px 34px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr)); gap:28px; align-items:center">
         <div>
           <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:1.25rem; line-height:1.06; margin:0 0 8px">FPC2534 fingerprint sensor — I²C bring-up guide</h3>
           <p style="margin:0; color:#485B63; max-width:64ch">A written guide to a sensor with almost no public documentation, including nine failure modes that aren't in the datasheet. Written while bringing the part up for the wallet.</p>
@@ -136,7 +178,7 @@
         <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; font-size:2.3rem; line-height:1.06; margin:0">About</h2>
         <span style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#485B63">Who you'd be hiring</span>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:26px; align-items:stretch">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr)); gap:26px; align-items:stretch">
         <div style="background:#EEF1DB; border-radius:30px; padding:20px">
           <img src="assets/about-portrait.webp" alt="Alexis Navarrete at the bench" style="border-radius:20px; width:100%">
         </div>
@@ -246,9 +288,15 @@ class Component extends DCLogic {
     const bar = pill && pill.parentElement;
     const fit = () => {
       if (!pill || !bar) return;
+      // back to the centred default before measuring — a width:100% left over from a
+      // narrow window would otherwise measure as "tight" forever and never un-stretch
       pill.style.position = 'absolute';
       pill.style.left = '50%';
       pill.style.transform = 'translateX(-50%)';
+      pill.style.order = '';
+      pill.style.width = '';
+      pill.style.justifyContent = '';
+      pill.style.flexWrap = '';
       const kids = Array.from(bar.children).filter(el => el !== pill);
       const sideMax = kids.reduce((w, el) => Math.max(w, el.getBoundingClientRect().width), 0);
       const tight = pill.scrollWidth / 2 + sideMax + 32 > bar.clientWidth / 2;
@@ -260,11 +308,6 @@ class Component extends DCLogic {
         pill.style.width = '100%';
         pill.style.justifyContent = 'center';
         pill.style.flexWrap = 'wrap';
-      } else {
-        pill.style.order = '';
-        pill.style.width = '';
-        pill.style.justifyContent = '';
-        pill.style.flexWrap = '';
       }
     };
     this._fit = fit;

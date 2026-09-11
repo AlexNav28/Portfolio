@@ -22,6 +22,39 @@
   a:focus-visible { outline: 2px solid #1F2A2E; outline-offset: 3px; }
   ::selection { background: #1F2A2E; color: #EEF1DB; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+  /* Phones. Layout is inline-styled, so these overrides need !important. */
+  @media (max-width: 640px) {
+    /* nav: wordmark + icons on one row, links on one row below; the résumé button stays in the contact block */
+    nav { padding: 12px 0 8px !important; }
+    nav > div { padding-inline: 16px !important; gap: 10px !important; }
+    nav a[href="resume.pdf"] { display: none !important; }
+    nav a[aria-label] { width: 36px !important; height: 36px !important; }
+    [data-navpill] { position: static !important; transform: none !important; order: 3; width: 100% !important; flex-wrap: nowrap !important; }
+    [data-navpill] a { flex: 1 1 0; text-align: center; padding: 8px 4px !important; font-size: 11.5px !important; letter-spacing: 0.08em !important; }
+    footer > div { padding-inline: 16px !important; }
+
+    /* one gutter instead of two: 12px page edge + ~18px card padding */
+    main { padding-inline: 12px !important; }
+    main > header { padding: 28px 20px !important; gap: 24px !important; border-radius: 24px !important; }
+    main > section, main > div { padding: 26px 18px !important; border-radius: 24px !important; }
+    main > section:last-child { padding: 40px 20px !important; }
+    main h2 { font-size: 1.75rem !important; }
+    main h3 { font-size: 1.35rem !important; }
+    main > section:not(:last-child) p, main figcaption { text-align: left !important; }
+    main blockquote { padding: 14px 16px !important; }
+
+    /* tables: tighter cells; scroll sideways only if one still doesn't fit */
+    main table { display: block; overflow-x: auto; font-size: 13.5px !important; }
+    main th, main td { padding: 9px 8px !important; }
+    main pre { font-size: 0.75rem !important; padding: 14px !important; }
+
+    /* stat strip: two across instead of five stacked */
+    main dl { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    main dl > div { padding: 12px 14px !important; }
+    main dl > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+    main dd { font-size: 1rem !important; }
+  }
 </style>
 </helmet>
 
@@ -53,7 +86,7 @@
 
   <main style="max-width:1140px; margin-inline:auto; padding-inline:26px">
 
-    <header style="background:#1F2A2E; color:#EEF1DB; border-radius:30px; padding:clamp(32px,4.4vw,58px); margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,3.4vw,48px); align-items:center">
+    <header style="background:#1F2A2E; color:#EEF1DB; border-radius:30px; padding:clamp(32px,4.4vw,58px); margin-bottom:26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr)); gap:clamp(28px,3.4vw,48px); align-items:center">
       <div style="min-width:0">
       <a href="index.html#work" style="color:#EEF1DB; opacity:0.72; font-size:14.5px; letter-spacing:0.06em" style-hover="opacity:1; color:#EEF1DB">← All work</a>
       <h1 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; color:#EEF1DB; font-size:clamp(2.1rem,4.6vw,3.5rem); letter-spacing:-0.02em; max-width:17ch; margin:20px 0 0">Intelligent Fingerprint Wallet</h1>
@@ -71,7 +104,7 @@
 
 
     <div style="background:#EEF1DB; border-radius:30px; padding:clamp(26px,3.4vw,46px); margin-bottom:22px">
-      <dl style="display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:2px; background:#C9C7AF; border-radius:18px; overflow:hidden; margin:0">
+      <dl style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr)); gap:2px; background:#C9C7AF; border-radius:18px; overflow:hidden; margin:0">
         <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:12.5px; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Microcontroller</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">ESP32-S3</dd></div>
         <div style="background:#EEF1DB; padding:16px 18px"><dt style="font-size:12.5px; letter-spacing:0.09em; text-transform:uppercase; color:#485B63; margin:0">Fingerprint sensor</dt><dd style="margin:5px 0 0; font-family:'Source Serif 4',Georgia,serif; font-size:1.12rem; color:#1F2A2E">FPC2534 · 508 dpi</dd></div>
         
@@ -133,7 +166,7 @@
         <span style="font-family:'Source Serif 4',Georgia,serif; font-size:15px; color:#485B63; border:1px solid #485B63; border-radius:999px; padding:3px 13px">03</span>
         <h2 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:2.2rem; margin:0">Architecture</h2>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(20px,2.6vw,34px); align-items:center; margin-bottom:22px">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:clamp(20px,2.6vw,34px); align-items:center; margin-bottom:22px">
       <div style="min-width:0">
       <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The enclosure is a seven-layer stack, and that stack <em>is</em> the architecture.</p>
       <table style="width:100%; border-collapse:collapse; margin:8px 0 0; font-size:14.5px">
@@ -152,7 +185,7 @@
       </div>
       <figure style="margin:0; min-width:0"><img src="assets/w-exploded.webp" alt="Exploded skeleton view of the wallet layers" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">The seven-layer stack, exploded.</figcaption></figure>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr)); gap:18px">
         <figure style="margin:0 0 22px"><img src="assets/w-block-diagram.webp" alt="Technology block diagram of the wallet" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">System block diagram.</figcaption></figure>
         <figure style="margin:0 0 22px"><img src="assets/w-state-machine.webp" alt="State machine diagram for the wallet firmware" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">Firmware state machine.</figcaption></figure>
       </div>
@@ -172,7 +205,7 @@
 
       <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">PCB</h3>
       <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">I designed the schematic and did the layout in KiCad: ESP32-S3, the ZIF-connected fingerprint sensor, IMU, power management, servo drive and indicator LEDs. I also made the board work after fabrication revealed three errors in my own design — covered honestly in the next section, because that recovery is a more useful thing to know about me than a clean first spin would have been.</p>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr)); gap:16px">
         <figure style="margin:0 0 22px"><img src="assets/w-schematic.webp" alt="KiCad schematic" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">Schematic.</figcaption></figure>
         <figure style="margin:0 0 22px"><img src="assets/w-layout.webp" alt="KiCad board layout" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">Layout.</figcaption></figure>
       </div>
@@ -193,7 +226,7 @@
 
       <h3 style="font-family:'Source Serif 4',Georgia,serif; font-weight:400; line-height:1.12; font-size:1.6rem; margin:34px 0 14px; text-align:center">Three errors in my own PCB, found at bring-up</h3>
       <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The board came back from fabrication with three defects, all mine. I chose to fix all three in hardware rather than respin, because a new board would have cost roughly a week out of a ten-week schedule.</p>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr)); gap:16px">
         <figure style="margin:0 0 22px"><img src="assets/w-defect-motor.webp" alt="The motor control area of the board" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center"><b style="color:#1F2A2E">Motor net unrouted.</b> I reassigned the buzzer's GPIO to drive the servo. The lock survived; the alarm didn't.</figcaption></figure>
         <figure style="margin:0 0 22px"><img src="assets/w-defect-nmos.webp" alt="The replaced NMOS transistor on the board" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center"><b style="color:#1F2A2E">NMOS gate and source swapped.</b> Fixed by sourcing a replacement and bending its pins to match the pads.</figcaption></figure>
         <figure style="margin:0 0 22px"><img src="assets/w-defect-zif.webp" alt="The ZIF connector with a bodge wire" loading="lazy" style="border-radius:20px; width:100%"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center"><b style="color:#1F2A2E">ZIF connector had no 3.3 V.</b> The sensor had no power at all. Fixed with a bodge wire from the rail.</figcaption></figure>
@@ -223,13 +256,13 @@
       <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The first three are the sensor's own matching behaviour, not decisions I made. The FPC2534 runs its authentication logic on-module, so multi-sample matching and the failure lockout are enforced by the part itself. They're configurable and I tried adjusting them, but the change in observed behaviour was small enough that I left the defaults alone.</p>
       <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">I'm stating that plainly because the distinction matters. Knowing which behaviour belongs to your code and which belongs to the part you integrated is a basic requirement of working with a smart peripheral, and claiming the sensor's built-in lockout as a security decision of mine would be easy to catch and not worth the credit.</p>
       <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center"><strong style="color:#1F2A2E; font-weight:700">The 30-second re-latch is mine.</strong> On a successful match I drive the servo open and start a timer; when it expires the servo closes regardless of what the user is doing. The wallet fails secure. Staying open requires an explicit, recent, successful authentication.</p>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; margin-bottom:22px">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr)); gap:18px; margin-bottom:22px">
         <figure style="margin:0"><img src="assets/w-closed-2.png" alt="The wallet closed, showing the sensor in the top shell" loading="lazy" style="border-radius:20px; width:100%; aspect-ratio:4/5; object-fit:contain; background:#E3E1C9"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">Closed. The sensor sits flush in the machined cutout in the top shell.</figcaption></figure>
         <figure style="margin:0"><img src="assets/w-internals.png" alt="Inside the wallet: PCB, servo and battery in the chassis" loading="lazy" style="border-radius:20px; width:100%; aspect-ratio:4/5; object-fit:contain; background:#E3E1C9"><figcaption style="margin-top:10px; font-size:14.5px; color:#485B63; text-align:center">Inside the chassis — board, servo and the latch it drives.</figcaption></figure>
       </div>
       <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">One limitation worth stating: the buzzer was sacrificed to the GPIO reassignment, so the audible alarm didn't make the final build.</p>
       <p style="margin:0 0 18px; color:#485B63; max-width:70ch; margin-inline:auto; text-align:center">The project was featured on the UCSD engineering school's Instagram. ECE 196 doesn't rank projects, so that's recognition rather than a placement.</p>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; font-size:0.86rem">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr)); gap:12px; font-size:0.86rem">
         <a href="https://akrew10.github.io/ECE196_Fingerprint_Wallet/" style="display:flex; justify-content:space-between; align-items:center; gap:10px; padding:20px; border-radius:20px; background:#E3E1C9; color:#1F2A2E; transition:background .15s, color .15s" style-hover="background:#1F2A2E; color:#EEF1DB">Project website <span>↗</span></a>
         <a href="https://www.instagram.com/p/DZN7bbdkt-F/?stkn=MTh5ZGlheDcwdnpiOA==" style="display:flex; justify-content:space-between; align-items:center; gap:10px; padding:20px; border-radius:20px; background:#E3E1C9; color:#1F2A2E; transition:background .15s, color .15s" style-hover="background:#1F2A2E; color:#EEF1DB">UCSD Engineering feature <span>↗</span></a>
       </div>
@@ -298,6 +331,15 @@ class Component extends DCLogic {
     const bar = pill && pill.parentElement;
     const fit = () => {
       if (!pill || !bar) return;
+      // back to the centred default before measuring — a width:100% left over from a
+      // narrow window would otherwise measure as "tight" forever and never un-stretch
+      pill.style.position = 'absolute';
+      pill.style.left = '50%';
+      pill.style.transform = 'translateX(-50%)';
+      pill.style.order = '';
+      pill.style.width = '';
+      pill.style.justifyContent = '';
+      pill.style.flexWrap = '';
       const kids = Array.from(bar.children).filter(el => el !== pill);
       const sideMax = kids.reduce((w, el) => Math.max(w, el.getBoundingClientRect().width), 0);
       const tight = pill.scrollWidth / 2 + sideMax + 32 > bar.clientWidth / 2;
@@ -309,14 +351,6 @@ class Component extends DCLogic {
         pill.style.width = '100%';
         pill.style.justifyContent = 'center';
         pill.style.flexWrap = 'wrap';
-      } else {
-        pill.style.position = 'absolute';
-        pill.style.left = '50%';
-        pill.style.transform = 'translateX(-50%)';
-        pill.style.order = '';
-        pill.style.width = '';
-        pill.style.justifyContent = '';
-        pill.style.flexWrap = '';
       }
     };
     this._fit = fit;
