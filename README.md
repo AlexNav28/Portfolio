@@ -14,6 +14,7 @@ Static portfolio site. No build step: plain HTML pages plus a local `support.js`
 | `Project-FingerprintWallet.dc.html` | Fingerprint Wallet case study |
 | `Project-STM32F446RE.dc.html` | STM32F446RE case study |
 | `support.js` | Design-canvas runtime (renders the `<x-dc>` markup) |
+| `resume.pdf` | Résumé PDF that the "Résumé" buttons link to |
 | `assets/`, `icons/` | Images used by the pages |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is, no Jekyll processing |
 
@@ -28,7 +29,3 @@ then visit http://localhost:8000
 ## Deploying
 
 Pages is configured to deploy from the `main` branch, root folder. Any push to `main` republishes the site within a minute or two.
-
-## To do
-
-- Add `resume.pdf` to the repo root — the "Résumé" buttons link to it.
